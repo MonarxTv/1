@@ -1,0 +1,176 @@
+/* ===== BODY ===== */
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background: linear-gradient(145deg,#0b0b0b,#1a1a1a);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  color:#fff;
+  overflow:hidden;
+}
+
+.container {
+  text-align:center;
+  padding:50px 30px;
+  background: rgba(20,20,20,0.95);
+  border-radius:30px;
+  box-shadow:0 0 60px rgba(212,175,55,0.5);
+}
+
+h1 {
+  font-size:40px;
+  margin-bottom:50px;
+  color: gold;
+  text-shadow:0 0 10px #d4af37;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display:block;
+  width:220px;
+  margin:15px auto;
+  padding:16px;
+  font-size:18px;
+  border:none;
+  border-radius:50px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn.free,
+.btn.premium {
+  background:#222;
+  color:gold;
+  border:2px solid gold;
+}
+
+.btn:hover {
+  background:gold;
+  color:#222;
+  box-shadow:0 0 20px gold,0 0 40px gold;
+}
+
+/* ===== MODAL ===== */
+#loginModal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.95);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.modal-content {
+  background:#111;
+  padding:50px 30px;
+  border-radius:25px;
+  width:350px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(212,175,55,0.6);
+}
+
+.modal-content h2 {
+  font-size:28px;
+  color:gold;
+  margin-bottom:30px;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  display:flex;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.input-group span {
+  background:#222;
+  padding:12px 14px;
+  border-radius:12px 0 0 12px;
+  font-weight:bold;
+  color:gold;
+}
+
+.input-group input {
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:0 12px 12px 0;
+  outline:none;
+  background:#222;
+  color:#fff;
+  font-size:16px;
+}
+
+.modal-content input[type=password] {
+  width:100%;
+  margin-bottom:20px;
+  border-radius:50px;
+  background:#222;
+  padding:12px;
+  border:none;
+  color:#fff;
+}
+
+/* ===== LOGIN BUTTON ===== */
+.modal-content button {
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:50px;
+  font-size:18px;
+  font-weight:bold;
+  color:#222;
+  background:gold;
+  cursor:pointer;
+  box-shadow:0 0 20px #d4af37;
+  transition:0.3s;
+}
+
+.modal-content button:hover {
+  transform:scale(1.05);
+}
+
+#status {
+  margin-top:12px;
+  min-height:22px;
+  font-weight:bold;
+  color:yellow;
+}
+
+/* ===== TELEGRAM BUTTON ===== */
+.telegram-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: #0088cc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.5);
+}
+
+.telegram-btn i {
+  margin-right: 8px;
+}
+
+.telegram-btn:hover {
+  background: #00aaff;
+  box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:420px){
+  .container,.modal-content {
+    width:90%;
+    padding:30px 20px;
+  }
+}
