@@ -25,7 +25,7 @@ function openLink(url){
 
 // KIRISH BUTTON
 btn1.addEventListener("click", () => { 
-  openLink("https://kholkuziev.github.io/RTV/"); 
+  openLink("https://MonarxTv.github.io/2/"); 
 });
 
 // PREMIUM BUTTON – faqat bosilganda modal ochiladi
@@ -81,3 +81,4 @@ passwordInput.addEventListener("keyup", (e) => {
 loginModal.addEventListener("click", (e) => { 
   if(e.target === loginModal) loginModal.style.display = "none"; 
 });
+
