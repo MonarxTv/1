@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VektorTV Premium</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- SHA256 uchun -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>VektorTV</h1>
+
+  <button class="btn free" id="freeBtn">
+    Kirish
+  </button>
+
+  <button class="btn premium" id="premiumBtn">
+    <i class="fas fa-crown"></i> Premium
+  </button>
+</div>
+
+<!-- ================= MODAL ================= -->
+<div id="loginModal">
+  <div class="modal-content">
+    <h2>Premium Kirish</h2>
+
+    <div class="input-group">
+      <span>+998</span>
+      <input type="text" id="phone"
+        placeholder="Oxirgi 9 raqam"
+        maxlength="9"
+        inputmode="numeric">
+    </div>
+
+    <input type="password" id="password"
+      placeholder="Parol (5 belgi)"
+      maxlength="5">
+
+    <button id="loginBtn">Kirish</button>
+    <div id="status"></div>
+
+    <!-- Telegram tugma -->
+    <a href="https://t.me/PremiumPaynet" target="_blank" class="telegram-btn">
+      <i class="fab fa-telegram-plane"></i> Telegram orqali to‘lov
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
