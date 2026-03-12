@@ -66,7 +66,7 @@ loginBtn.addEventListener("click", () => {
   if(user){
     localStorage.setItem("premiumUser", phone);
     loginModal.style.display = "none";
-    openLink("https://kholkuziev.github.io/RTV2/");
+    openLink("https://Monarxtv.github.io/2/");
   } else {
     status.innerText = "Telefon yoki parol xato";
   }
