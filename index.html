@@ -22,7 +22,6 @@
 <link rel="apple-touch-icon" href="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp.png">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-
 </head>
 <body style="margin:0; padding:0; height:100vh; overflow:hidden;">
 
@@ -61,17 +60,17 @@
 <script src="script.js"></script>
 
 <script>
-// Iframe orqali boshqa saytni yuklash
+// Tugmalarni bosganda iframe ochish
 document.getElementById("openInChromeBtn").addEventListener("click", () => {
   document.getElementById("mainContainer").style.display = "none";
   document.getElementById("iframeContainer").style.display = "block";
-  document.getElementById("siteFrame").src = "https://boshqa-sayt.uz";
+  document.getElementById("siteFrame").src = "https://sizning-bepul-saytingiz.uz"; // o‘zgartiring
 });
 
 document.getElementById("premiumBtn").addEventListener("click", () => {
   document.getElementById("mainContainer").style.display = "none";
   document.getElementById("iframeContainer").style.display = "block";
-  document.getElementById("siteFrame").src = "https://boshqa-sayt.uz/premium";
+  document.getElementById("siteFrame").src = "https://sizning-premium-saytingiz.uz"; // o‘zgartiring
 });
 
 // PWA install tugmasi
