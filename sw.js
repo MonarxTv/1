@@ -1,4 +1,4 @@
-// Service Worker oddiy minimal versiyasi
+// Service Worker minimal versiyasi
 
 self.addEventListener("install", event => {
   console.log("Service Worker o‘rnatildi");
@@ -13,10 +13,10 @@ self.addEventListener("activate", event => {
 // Cache qilish (minimal)
 const CACHE_NAME = "monarxtv-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/script.js",
+  "./",
+  "./index.html",
+  "./style.css",
+  "./script.js",
   "https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp.png"
 ];
 
