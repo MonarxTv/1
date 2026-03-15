@@ -205,62 +205,71 @@ border:none;
 border-radius:30px;
 font-size:16px;
 cursor:pointer;
-z-index:9999;
-
-/* olov glow */
-box-shadow:
-0 0 10px #ff2a2a,
-0 0 20px #ff5a00,
-0 0 40px #ff2a2a;
-
+box-shadow:0 0 10px #ff2a2a;
 animation:pulse 1.5s infinite;
-overflow:hidden;
 }
 
-/* elektr aylana */
-#installBtn::before{
-content:"";
-position:absolute;
-top:-4px;
-left:-4px;
-right:-4px;
-bottom:-4px;
-border-radius:35px;
-
-background:linear-gradient(
-90deg,
-transparent,
-#ff2a2a,
-#ff9900,
-#ff2a2a,
-transparent
-);
-
-background-size:300%;
-z-index:-1;
-
-animation:electric 2s linear infinite;
-}
-
-/* pulsatsiya */
 @keyframes pulse{
 0%{
 transform:scale(1);
+box-shadow:0 0 5px #ff2a2a;
 }
 50%{
-transform:scale(1.08);
+transform:scale(1.1);
+box-shadow:0 0 20px #ff2a2a;
 }
 100%{
 transform:scale(1);
+box-shadow:0 0 5px #ff2a2a;
 }
+}
+#installBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:12px 25px;
+background:#ff2a2a;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+
+/* OLIV GLOW */
+box-shadow:
+0 0 10px #ff2a2a,
+0 0 20px #ff4500,
+0 0 40px #ff8c00,
+0 0 60px #ff4500;
+
+animation:pulse 1.5s infinite;
 }
 
-/* elektr aylanish */
-@keyframes electric{
+@keyframes pulse{
+
 0%{
-background-position:0%;
+transform:scale(1);
+box-shadow:
+0 0 5px #ff2a2a,
+0 0 10px #ff4500,
+0 0 20px #ff8c00;
 }
+
+50%{
+transform:scale(1.1);
+box-shadow:
+0 0 20px #ff2a2a,
+0 0 40px #ff4500,
+0 0 60px #ff8c00,
+0 0 80px #ff4500;
+}
+
 100%{
-background-position:300%;
+transform:scale(1);
+box-shadow:
+0 0 5px #ff2a2a,
+0 0 10px #ff4500,
+0 0 20px #ff8c00;
 }
+
 }
