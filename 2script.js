@@ -52,7 +52,7 @@ const moviesData=[
    { title:"Yengilmas / Invinsible",
       sliderIcon:"https://miro.medium.com/1*TQusJA0dGM2IA7H_VrqOsw.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://upload.wikimedia.org/wikipedia/en/0/09/Invincible_season_2_Poster.jpg",
-    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2","premium"],
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2","premium","premium","premium","premium","premium","premium","premium"],
     type:"anime",
     genre:"Triller • Jangari • Fantastika",
     desc:"17 yoshli Mark Greyson er yuzidagi eng kuchli superqahramonning o'g'lidir va tez orada uning o'zi ham super kuchlarga ega bo'lishi va ularni boshqarishni o'rganishi kerak.",
