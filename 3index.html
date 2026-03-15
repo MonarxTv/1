@@ -148,11 +148,13 @@
 </div>
 
 <div id="actorModal">
-<div class="back premium-btn" onclick="closeActorModal()">← Orqaga</div>
+  <div id="actorHeader" class="actor-header">
+    <span id="closeActorModal" style="cursor:pointer; font-size:24px; color:#fff;">×</span>
+    <img id="actorModalImg" alt="Actor">
+    <h2 id="actorModalName"></h2>
+  </div>
 
-<div id="actorHeader" class="actor-header">
-<img id="actorModalImg" alt="Actor">
-<h2 id="actorModalName"></h2>
+  <div id="actorMovies" class="genre-cards"></div>
 </div>
 
 <div id="actorMovies" class="genre-cards"></div>
