@@ -232,12 +232,4 @@ box-shadow:
 0 0 24px rgba(0,255,100,0.8);
 }
 
-100%{
-transform:scale(1);
-box-shadow:
-0 0 3px rgba(0,255,100,0.9),
-0 0 6px rgba(0,255,100,0.8),
-0 0 12px rgba(0,255,100,0.7);
-}
-
 }
