@@ -6,6 +6,35 @@ const shortsData=[
 const genresData=["Jangari","Fantastika","Qo‘rqinchli","Kriminal","Triller","Komediya","Harbiy"];
 
 const moviesData=[
+          {title:"Ta'tildagi qotil / Baxtsiz Xodisa 2 ",
+   sliderIcon:"https://m.media-amazon.com/images/S/pv-target-images/8d03123f4d2dbfe84c3f9f96ced4c6aa765be96831076184343f4d8cbc98ead6._SX1080_FMjpg_.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://files.itv.uz/uploads/content/poster/2023/10/24/6f6daec10bbdbdd85c525bb7bd177884-q-700x1002.jpeg",
+    video:["https://vk.com/video_ext.php?oid=-186124728&id=456246201&hd=2"],
+    type:"movie",
+    genre:"Jangari • Triller • Harbiy • Komediya",
+    desc:"Yollangan qotil Mayk Fellon yangi vazifani oldi - jinoiy tashkilot rahbarining buzilgan o'g'lini himoya qilish. Ammo buning uchun yana o'ldirish kerak. Fallon va uning palatasi dunyodagi eng sovuqqon qotillar tomonidan ovlanmoqda.",
+  actors: [ {tmdbId:78110}, {tmdbId:56614}, {tmdbId:59076}, {tmdbId:1593556}, {tmdbId:1634806}, {tmdbId:1263902}, {tmdbId:1070721}, {tmdbId:2320567}, {tmdbId:2503880}, {tmdbId:1493724} ],
+    images:[
+      "https://m.media-amazon.com/images/M/MV5BNGIzZjVkNWMtYmViNC00ZGQzLWJlZTMtZDMyMjVlN2E3MzliXkEyXkFqcGc@._V1_QL75_UX525_.jpg", 
+      "https://m.media-amazon.com/images/M/MV5BZjlkOGY1NmUtMjliZi00ZGE2LTllMzAtZWNkNjdlMTcyNTg4XkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_.jpg", 
+       "https://m.media-amazon.com/images/M/MV5BYWZjMjZlYzYtZjFmZi00NzAyLWEzOWUtYTA3MDc2NzVjNmI1XkEyXkFqcGc@._V1_.jpg",
+      "https://www.worldofmartialarts.tv/wp-content/uploads/2022/10/Still-16lr-1024x683.jpg"]
+},  
+  
+      {title:"Baxtsiz Xodisa 1",
+   sliderIcon:"https://images.moviesanywhere.com/3ed321262b8b72b03ffdd4342a367787/a9d7999c-dd60-4756-91f7-7ee8c88d3125.jpg?w=2560&r=16x9", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://images.uzmovi.tv/ii/1621839448/fd9b13d3/34560358.jpg",
+    video:["https://vk.com/video_ext.php?oid=-186124728&id=456241096&hd=2"],
+    type:"movie",
+    genre:"Jangari • Triller • Harbiy ",
+    desc:"Sovuq qonli hitman Mayk Fallon har qanday qotillikni baxtsiz hodisa qilish mahorati bilan mashhur. U sobiq sevgilisi o'z jamoasining qurboniga aylanganda u o'z iste'dodlarini teskari yo'nalishda yo'naltiradi.",
+  actors: [ {tmdbId:78110}, {tmdbId:56614}, {tmdbId:45827}, {tmdbId:64856}, {tmdbId:11007}, {tmdbId:1168704}, {tmdbId:19839}, {tmdbId:59076}, {tmdbId:975} ],
+    images:[
+      "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2017/05/accident-man-b.png?resize=740%2C492", 
+      "https://images05.military.com/sites/default/files/styles/full/public/2018-02/scottadkinsaccidentman.jpg", 
+       "https://kungfukingdom.com/wp-content/uploads/2018/02/Mike-doesnt-see-eye-to-eye-with-Charlie.jpg",
+      "https://filmcombatsyndicate.com/wp-content/uploads/2018/02/1517312455-1874481572-neschastnyy-sluchay-3-1024x650-1024x585.jpg"]
+}, 
     { title:"Yigitlar / The boys",
       sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
