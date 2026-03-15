@@ -205,21 +205,62 @@ border:none;
 border-radius:30px;
 font-size:16px;
 cursor:pointer;
-box-shadow:0 0 10px #ff2a2a;
+z-index:9999;
+
+/* olov glow */
+box-shadow:
+0 0 10px #ff2a2a,
+0 0 20px #ff5a00,
+0 0 40px #ff2a2a;
+
 animation:pulse 1.5s infinite;
+overflow:hidden;
 }
 
+/* elektr aylana */
+#installBtn::before{
+content:"";
+position:absolute;
+top:-4px;
+left:-4px;
+right:-4px;
+bottom:-4px;
+border-radius:35px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#ff2a2a,
+#ff9900,
+#ff2a2a,
+transparent
+);
+
+background-size:300%;
+z-index:-1;
+
+animation:electric 2s linear infinite;
+}
+
+/* pulsatsiya */
 @keyframes pulse{
 0%{
 transform:scale(1);
-box-shadow:0 0 5px #ff2a2a;
 }
 50%{
-transform:scale(1.1);
-box-shadow:0 0 20px #ff2a2a;
+transform:scale(1.08);
 }
 100%{
 transform:scale(1);
-box-shadow:0 0 5px #ff2a2a;
+}
+}
+
+/* elektr aylanish */
+@keyframes electric{
+0%{
+background-position:0%;
+}
+100%{
+background-position:300%;
 }
 }
