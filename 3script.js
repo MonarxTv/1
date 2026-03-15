@@ -31,7 +31,7 @@ const searchBtn = document.getElementById("searchBtn");
 const searchModal = document.getElementById("searchModal");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
-
+const closeActorBtn = document.getElementById("closeActorModal");
 // ==================== TMDB ====================
 const TMDB_API_KEY = "c86f82502e750953b61a3fc9895c95a2";
 
@@ -83,7 +83,9 @@ function prevShort() {
   if (currentShortIndex < 0) currentShortIndex = shortsData.length - 1;
   openShort(currentShortIndex);
 }
-
+closeActorBtn.addEventListener("click", () => {
+  actorModal.style.display = "none";
+});
 // ==================== RENDER PREMIERES ====================
 premieresData.forEach(item => {
   const div = document.createElement("div");
