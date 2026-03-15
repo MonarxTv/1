@@ -32,10 +32,11 @@ const searchModal = document.getElementById("searchModal");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
 const closeActorBtn = document.getElementById("closeActorModal");
+
 // ==================== TMDB ====================
 const TMDB_API_KEY = "c86f82502e750953b61a3fc9895c95a2";
 
-// ==================== RENDER SHORTS ====================
+// ==================== SHORT MODAL ====================
 let currentShortIndex = 0;
 
 function renderShorts() {
@@ -83,10 +84,11 @@ function prevShort() {
   if (currentShortIndex < 0) currentShortIndex = shortsData.length - 1;
   openShort(currentShortIndex);
 }
-closeActorBtn.addEventListener("click", () => {
-  actorModal.style.display = "none";
-});
-// ==================== RENDER PREMIERES ====================
+
+// ==================== ACTOR MODAL ====================
+closeActorBtn.addEventListener("click", () => actorModal.style.display = "none");
+
+// ==================== PREMIERES ====================
 premieresData.forEach(item => {
   const div = document.createElement("div");
   div.className = "card";
@@ -220,7 +222,7 @@ async function showActorMovies(actorId) {
 
 function closeActorModal() { actorModal.style.display = "none"; player.src = ""; }
 
-// ==================== MODALS ====================
+// ==================== IMAGE MODAL ====================
 const imageModal = document.createElement("div");
 imageModal.id = "imageModal";
 imageModal.style.cssText = "display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;";
@@ -229,7 +231,7 @@ document.body.appendChild(imageModal);
 const modalImg = document.getElementById("modalImg");
 document.getElementById("closeImgModal").onclick = ()=> { imageModal.style.display = "none"; };
 
-// ==================== BUTTONS ====================
+// ==================== LIST MODAL ====================
 document.getElementById("allMoviesBtn").addEventListener("click", ()=>openListModal(moviesData.filter(m=>m.type==="movie")));
 document.getElementById("allSeriesBtn").addEventListener("click", ()=>openListModal(moviesData.filter(m=>m.type==="series")));
 document.getElementById("allAnimeBtn").addEventListener("click", ()=>openListModal(moviesData.filter(m=>m.type==="anime")));
