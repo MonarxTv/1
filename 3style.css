@@ -765,7 +765,7 @@ font-size:20px;
   color:#000;
   background:linear-gradient(135deg,#ffd700,#ffb300);
 }
-#searchModal input#searchInput {
+#searchModal {
   width: 100%;
   max-width: 500px;
   padding: 14px 20px;
@@ -866,4 +866,12 @@ font-size:20px;
 }
 #nextShortBtn {
   right: 30px;
+}
+#searchModal input#searchInput {
+  width: 100%;
+  max-width: 250px;
+  margin-left: auto;      /* o‘ngga suradi */
+  display: block;         /* block bo‘lishi kerak */
+  text-align: right;      /* matn o‘ng tomonda */
+   margin-top:10px;      /* o‘ngga suradi */
 }
