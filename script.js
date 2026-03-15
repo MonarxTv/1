@@ -63,11 +63,11 @@ loginBtn.addEventListener("click", () => {
   const hash = CryptoJS.SHA256(password).toString();
   const user = validUsers.find(u => u.phone === phone && u.password === hash);
 
-  if(user){
-    localStorage.setItem("premiumUser", phone);
-    loginModal.style.display = "none";
-    openLink("https://Monarxtv.github.io/2/");
-  } else {
+if(user){
+  localStorage.setItem("premiumUser", phone);
+  loginModal.style.display = "none";
+  window.location.href = "3index.html";
+} else {
     status.innerText = "Telefon yoki parol xato";
   }
 });
