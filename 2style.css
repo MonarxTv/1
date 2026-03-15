@@ -7,7 +7,7 @@
 
 /* Body uchun umumiy stil */
 body { 
-  margin: 2 8px auto; /* Body markazga joylashadi */
+  margin: 2px 8px auto; /* Body markazga joylashadi */
   width: 100%; /* Ekran bo'ylab kenglik */
   max-width: 400px; /* Maksimal kenglik 400px */
   background: #0b0b0b; /* Qora fon */
@@ -765,9 +765,9 @@ font-size:20px;
   color:#000;
   background:linear-gradient(135deg,#ffd700,#ffb300);
 }
-#searchModal {
+#searchModal 
   width: 100%;
-  max-width: 500px;
+  max-width: 200px;
   padding: 14px 20px;
   border-radius: 50px;
   border: none;
@@ -866,6 +866,14 @@ font-size:20px;
 }
 #nextShortBtn {
   right: 30px;
+}
+#searchModal input#searchInput {
+  width: 100%;
+  max-width: 250px;
+  margin-left: auto;      /* o‘ngga suradi */
+  display: block;         /* block bo‘lishi kerak */
+  text-align: right;      /* matn o‘ng tomonda */
+   margin-top:10px;      /* o‘ngga suradi */
 }
 /* PREMIUM MESSAGE CONTAINER */
 .premium-message{
