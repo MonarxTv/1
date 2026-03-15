@@ -52,7 +52,7 @@ const moviesData=[
    { title:"Yengilmas / Invinsible",
       sliderIcon:"https://miro.medium.com/1*TQusJA0dGM2IA7H_VrqOsw.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://upload.wikimedia.org/wikipedia/en/0/09/Invincible_season_2_Poster.jpg",
-    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2"],
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2","premium"],
     type:"anime",
     genre:"Triller • Jangari • Fantastika",
     desc:"17 yoshli Mark Greyson er yuzidagi eng kuchli superqahramonning o'g'lidir va tez orada uning o'zi ham super kuchlarga ega bo'lishi va ularni boshqarishni o'rganishi kerak.",
@@ -207,7 +207,7 @@ const searchBtn = document.getElementById("searchBtn");
 const searchModal = document.getElementById("searchModal");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
-
+const premiumMessage = document.getElementById("premiumMessage");
 // ==================== TMDB ====================
 const TMDB_API_KEY = "c86f82502e750953b61a3fc9895c95a2";
 
@@ -253,12 +253,26 @@ function goHome() {
 }
 
 
-function changeEpisode(btn, src) {
-  if (!src.includes("hd=")) src += src.includes("?") ? "&hd=2" : "?hd=2";
-  player.src = src;
-  episodesDiv.querySelectorAll("button").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-}
+function changeEpisode(btn, videoUrl){
+
+document.querySelectorAll(".episodes button").forEach(b=>{
+b.classList.remove("active");
+});
+
+btn.classList.add("active");
+
+if(videoUrl === "premium"){
+
+player.style.display="none";
+premiumMessage.style.display="block";
+
+}else{
+
+premiumMessage.style.display="none";
+player.style.display="block";
+player.src=videoUrl;
+
+}}
 
 async function openMoviePage(item) {
   home.classList.add("hidden");
@@ -278,7 +292,18 @@ async function openMoviePage(item) {
       episodesDiv.appendChild(btn);
     });
   }
+if(item.video[0] === "premium"){
 
+player.style.display="none";
+premiumMessage.style.display="block";
+
+}else{
+
+premiumMessage.style.display="none";
+player.style.display="block";
+player.src=item.video[0];
+
+}
   movieTitle.textContent = item.title;
   movieGenre.textContent = item.genre;
   movieDesc.textContent = item.desc;
