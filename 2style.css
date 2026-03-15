@@ -940,3 +940,11 @@ box-shadow:0 0 12px rgba(255,0,0,0.6);
   text-align: right;      /* matn o‘ng tomonda */
    margin-top:10px;      /* o‘ngga suradi */
 }
+.premium-message::before{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(255,215,0,0.15), transparent 60%);
+filter:blur(20px);
+pointer-events:none; /* MUHIM */
+}
