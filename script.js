@@ -25,8 +25,8 @@ function openLink(url){
 
 // KIRISH BUTTON
 btn1.addEventListener("click", () => { 
-  openLink("https://MonarxTv.github.io/2/"); 
-});
+  window.location.href = "2index.html";
+});;
 
 // PREMIUM BUTTON – faqat bosilganda modal ochiladi
 btn2.addEventListener("click", () => { 
