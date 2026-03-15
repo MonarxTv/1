@@ -199,48 +199,19 @@ position:fixed;
 bottom:20px;
 right:20px;
 padding:12px 25px;
-background:#ff2a2a;
-color:white;
-border:none;
-border-radius:30px;
-font-size:16px;
-cursor:pointer;
-box-shadow:0 0 10px #ff2a2a;
-animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-0%{
-transform:scale(1);
-box-shadow:0 0 5px #ff2a2a;
-}
-50%{
-transform:scale(1.1);
-box-shadow:0 0 20px #ff2a2a;
-}
-100%{
-transform:scale(1);
-box-shadow:0 0 5px #ff2a2a;
-}
-}
-#installBtn{
-position:fixed;
-bottom:20px;
-right:20px;
-padding:12px 25px;
-background:#ff2a2a;
+background:#00ff66;
 color:white;
 border:none;
 border-radius:30px;
 font-size:16px;
 cursor:pointer;
 
-/* OLIV GLOW */
+/* YORQIN YASHIL GLOW */
 box-shadow:
-0 0 10px #ff2a2a,
-0 0 20px #ff4500,
-0 0 40px #ff8c00,
-0 0 60px #ff4500;
+0 0 10px #00ff66,
+0 0 20px #00ff66,
+0 0 40px #00ff99,
+0 0 60px #00ff66;
 
 animation:pulse 1.5s infinite;
 }
@@ -250,26 +221,26 @@ animation:pulse 1.5s infinite;
 0%{
 transform:scale(1);
 box-shadow:
-0 0 5px #ff2a2a,
-0 0 10px #ff4500,
-0 0 20px #ff8c00;
+0 0 5px #00ff66,
+0 0 10px #00ff66,
+0 0 20px #00ff99;
 }
 
 50%{
 transform:scale(1.1);
 box-shadow:
-0 0 20px #ff2a2a,
-0 0 40px #ff4500,
-0 0 60px #ff8c00,
-0 0 80px #ff4500;
+0 0 20px #00ff66,
+0 0 40px #00ff66,
+0 0 60px #00ff99,
+0 0 80px #00ff66;
 }
 
 100%{
 transform:scale(1);
 box-shadow:
-0 0 5px #ff2a2a,
-0 0 10px #ff4500,
-0 0 20px #ff8c00;
+0 0 5px #00ff66,
+0 0 10px #00ff66,
+0 0 20px #00ff99;
 }
 
 }
