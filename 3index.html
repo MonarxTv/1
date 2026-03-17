@@ -118,7 +118,12 @@
 
 <div class="back premium-btn" onclick="goHome()">← Orqaga</div>
 
-<iframe id="player" src="" allowfullscreen></iframe>
+<div id="playerContainer">
+  <!-- Iframe va MP4 Player bir joyda -->
+  <video id="player" controls width="100%" height="500">
+    <source src="" type="video/mp4">
+  </video>
+</div>
 
 <div class="episodes" id="episodes"></div>
 
