@@ -8,7 +8,7 @@ const premieresData = moviesData.filter(m => m.sliderIcon);
 const animeContainer = document.getElementById("anime");
 const home = document.getElementById("home");
 const moviePage = document.getElementById("movie");
-const player = document.getElementById("player");
+const playerContainer = document.getElementById("playerContainer");
 const episodesDiv = document.getElementById("episodes");
 const movieTitle = document.getElementById("movie-title");
 const movieGenre = document.getElementById("movie-genre");
@@ -113,16 +113,45 @@ renderCards(moviesData.filter(m => m.type === "movie").slice(0, 3), moviesContai
 renderCards(moviesData.filter(m => m.type === "series").slice(0, 3), seriesContainer);
 renderCards(moviesData.filter(m => m.type === "anime").slice(0, 3), animeContainer);
 
+function loadVideo(url) {
+  playerContainer.innerHTML = "";
+
+  if(url === "premium"){
+    premiumMessage.style.display = "block";
+    return;
+  }
+  premiumMessage.style.display = "none";
+
+  if(url.endsWith(".mp4")){
+    const video = document.createElement("video");
+    video.src = url;
+    video.controls = true;
+    video.autoplay = true;
+    video.style.width = "100%";
+    video.style.height = "100%";
+    playerContainer.appendChild(video);
+  } else {
+    const iframe = document.createElement("iframe");
+    iframe.src = url.includes("hd=") ? url : (url.includes("?") ? url+"&hd=2" : url+"?hd=2");
+    iframe.allow = "autoplay; fullscreen";
+    iframe.allowFullscreen = true;
+    iframe.frameBorder = "0";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    playerContainer.appendChild(iframe);
+  }
+}
+
 // ==================== HOME / MOVIE PAGE ====================
 function goHome() {
-  player.src = "";
+  playerContainer.innerHTML = "";
   moviePage.classList.add("hidden");
   home.classList.remove("hidden");
 }
 
 function changeEpisode(btn, src) {
   if (!src.includes("hd=")) src += src.includes("?") ? "&hd=2" : "?hd=2";
-  player.src = src;
+ loadVideo(src);
   episodesDiv.querySelectorAll("button").forEach(b => b.classList.remove("active"));
   btn.classList.add("active");
 }
@@ -134,7 +163,7 @@ async function openMoviePage(item) {
 
   let videoSrc = item.video[0];
   if (!videoSrc.includes("hd=")) videoSrc += videoSrc.includes("?") ? "&hd=2" : "?hd=2";
-  player.src = videoSrc;
+  loadVideo(videoSrc);
 
   episodesDiv.innerHTML = "";
   if (item.video.length > 1) {
