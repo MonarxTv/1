@@ -8,9 +8,9 @@ const genresData=["Jangari","Fantastika","Qo‘rqinchli","Kriminal","Triller","K
 const moviesData=[
   {
     title:"G'aroyib odam 1-qism",
-    sliderIcon:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg",
-    image:"https://cdn.fastora.uz/poster_8146002445_1764176088.jpg",
-    video:["https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 1-qism 480p (asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 2-qism 480p (asilmedia.net).mp4"],
+    sliderIcon:"https://images.thedirect.com/media/article_full/wonder-man-mcu-powers.jpg",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ6yL0FZUuRq3zD15MxUPntslBMJGBMhbtAQ&s",
+    video:["https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 1-qism 480p (asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 2-qism 480p (asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 3-qism 480p (asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 4-qism 480p (asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib odam/G'aroyib odam 5-qism 480p (asilmedia.net).mp4"],
     type:"series",
     genre:"Fantastika • Sarguzasht",
     desc:"G'aroyib odam serialining 1-qismi.",
