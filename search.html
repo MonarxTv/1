@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonarxTv Qidiruv</title>
+
+<link rel="stylesheet" href="2style.css">
+
+<style>
+body{
+  margin:0;
+  background:#0f172a;
+  color:#fff;
+  font-family:sans-serif;
+}
+
+/* HEADER */
+.header{
+  padding:15px;
+  background:#020617;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+#searchInput{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  background:#1e293b;
+  color:#fff;
+  font-size:15px;
+}
+
+/* TITLES */
+.section-title{
+  margin:20px 20px 10px;
+  font-size:18px;
+  color:#94a3b8;
+}
+
+/* MOVIE GRID */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap:14px;
+  padding:0 20px 20px;
+}
+
+.card{
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card div{
+  padding:8px;
+  font-size:14px;
+}
+
+/* ACTOR ROW */
+.actor-row{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding:10px 20px 20px;
+}
+
+.actor-row::-webkit-scrollbar{
+  height:6px;
+}
+
+.actor-row::-webkit-scrollbar-thumb{
+  background:#334155;
+  border-radius:10px;
+}
+
+.actor-card{
+  min-width:100px;
+  background:#1e293b;
+  border-radius:10px;
+  text-align:center;
+  cursor:pointer;
+  padding:10px;
+  transition:0.2s;
+}
+
+.actor-card:hover{
+  transform:scale(1.08);
+}
+
+.actor-card img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:6px;
+}
+
+.actor-card div{
+  font-size:13px;
+}
+
+/* STATES */
+.empty{
+  text-align:center;
+  padding:40px;
+  color:#64748b;
+}
+
+.loading{
+  text-align:center;
+  padding:20px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <input id="searchInput" placeholder="Kino yoki aktyor qidir...">
+</div>
+
+<div id="results"></div>
+
+<script src="3data.js"></script>
+
+<script>
+const input = document.getElementById("searchInput");
+const results = document.getElementById("results");
+const TMDB_API_KEY = "c86f82502e750953b61a3fc9895c95a2";
+
+let debounceTimer;
+
+// OPEN MOVIE
+function openMovie(item){
+  const index = moviesData.indexOf(item);
+  if(index !== -1){
+    window.location.href = `list.html?id=${index}`;
+  }
+}
+
+// SEARCH
+input.addEventListener("input", ()=>{
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(()=>{
+    search(input.value.trim());
+  }, 300);
+});
+
+async function search(query){
+  results.innerHTML="";
+
+  if(!query){
+    results.innerHTML = `<div class="empty">Qidiruv boshlash uchun yozing 🔍</div>`;
+    return;
+  }
+
+  results.innerHTML = `<div class="loading">Qidirilmoqda...</div>`;
+
+  const q = query.toLowerCase();
+
+  try{
+    // ===== ACTORS (1 ROW) =====
+    const res = await fetch(
+      `https://api.themoviedb.org/3/search/person?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
+    );
+
+    const data = await res.json();
+    const actors = data.results.filter(a=>a.profile_path).slice(0,10);
+
+    results.innerHTML="";
+
+    if(actors.length){
+      const title=document.createElement("div");
+      title.className="section-title";
+      title.textContent="👤 Aktyorlar";
+      results.appendChild(title);
+
+      const row=document.createElement("div");
+      row.className="actor-row";
+
+      actors.forEach(actor=>{
+        const div=document.createElement("div");
+        div.className="actor-card";
+
+        div.innerHTML=`
+          <img src="https://image.tmdb.org/t/p/w185${actor.profile_path}">
+          <div>${actor.name}</div>
+        `;
+
+        div.onclick=()=>{
+          window.location.href=`actor.html?id=${actor.id}`;
+        };
+
+        row.appendChild(div);
+      });
+
+      results.appendChild(row);
+    }
+
+    // ===== MOVIES (GRID) =====
+    const movies = moviesData.filter(m =>
+      m.title.toLowerCase().includes(q) ||
+      m.genre.toLowerCase().includes(q)
+    );
+
+    if(movies.length){
+      const title=document.createElement("div");
+      title.className="section-title";
+      title.textContent="🎬 Filmlar";
+      results.appendChild(title);
+
+      const grid=document.createElement("div");
+      grid.className="grid";
+
+      movies.forEach(item=>{
+        const div=document.createElement("div");
+        div.className="card";
+
+        div.innerHTML=`
+          <img src="${item.image}">
+          <div>${item.title}</div>
+        `;
+
+        div.onclick=()=>openMovie(item);
+        grid.appendChild(div);
+      });
+
+      results.appendChild(grid);
+    }
+
+    // EMPTY
+    if(!movies.length && !actors.length){
+      results.innerHTML=`<div class="empty">Hech narsa topilmadi ❌</div>`;
+    }
+
+  }catch(e){
+    results.innerHTML=`<div class="empty">Xatolik yuz berdi ⚠️</div>`;
+  }
+}
+</script>
+
+</body>
+</html>
