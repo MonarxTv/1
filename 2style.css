@@ -7,7 +7,7 @@
 
 /* Body uchun umumiy stil */
 body { 
-  margin: 2px 8px auto; /* Body markazga joylashadi */
+  margin: 2 8px auto; /* Body markazga joylashadi */
   width: 100%; /* Ekran bo'ylab kenglik */
   max-width: 400px; /* Maksimal kenglik 400px */
   background: #0b0b0b; /* Qora fon */
@@ -610,14 +610,14 @@ header #searchBtn {
 .row:hover h3::after {
   width: 150px;
 }
-#player {
+#playerContainer {
   width: 100vw;   /* viewport kengligi */
   height: 56.25vw; /* 16:9 nisbat, gorizontal ekranda to‘g‘ri chiqadi */
   max-height: 100vh;
 }
 
 @media (orientation: landscape) {
-  #player {
+  #playerContainer {
     height: 100vh;
     width: auto;
   }
@@ -765,9 +765,9 @@ font-size:20px;
   color:#000;
   background:linear-gradient(135deg,#ffd700,#ffb300);
 }
-#searchModal 
+#searchModal input#searchInput {
   width: 100%;
-  max-width: 200px;
+  max-width: 500px;
   padding: 14px 20px;
   border-radius: 50px;
   border: none;
@@ -867,14 +867,6 @@ font-size:20px;
 #nextShortBtn {
   right: 30px;
 }
-#searchModal input#searchInput {
-  width: 100%;
-  max-width: 250px;
-  margin-left: auto;      /* o‘ngga suradi */
-  display: block;         /* block bo‘lishi kerak */
-  text-align: right;      /* matn o‘ng tomonda */
-   margin-top:10px;      /* o‘ngga suradi */
-}
 /* PREMIUM MESSAGE CONTAINER */
 .premium-message{
 width:100%;
@@ -939,14 +931,6 @@ z-index:2;
 .premium-message a:hover{
 transform:scale(1.05);
 box-shadow:0 0 12px rgba(255,0,0,0.6);
-}
-#searchModal input#searchInput {
-  width: 100%;
-  max-width: 250px;
-  margin-left: auto;      /* o‘ngga suradi */
-  display: block;         /* block bo‘lishi kerak */
-  text-align: right;      /* matn o‘ng tomonda */
-   margin-top:10px;      /* o‘ngga suradi */
 }
 .premium-message::before{
 content:"";
