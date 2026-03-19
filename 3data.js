@@ -1,9 +1,27 @@
 const shortsData=[
-{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},{src:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg",video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"}
+{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
+,{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
+,{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
+
 ];
 
 
 const moviesData=[
+          {title:"G'aroyib odam ",
+   sliderIcon:"https://i.ytimg.com/vi/0wv4ZcuSrUQ/maxresdefault.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://www.panavision.com/images/default-source/credits/credit_poster_wonder_man-350x525-304836a.jpg?sfvrsn=f548e9f8_1https://idup.tv/uploads/posts/2026-03/fabrika-formatovximage8a2b7172b11f92dc_png_pagespeed_ic_habcdodgsa.jpg",
+    video:["https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%201-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%202-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%203-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%204-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%205-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%206-qism%20480p%20(asilmedia.net).mp4"],
+    type:"movie",
+    genre:"Jangari • Triller • Harbiy • Komediya",
+    desc:"Aktyor Saymon Uilyams bir necha yildan beri Gollivudda muvaffaqiyat qozonishga urinadi, ammo omadi yurishmaydi. Uni “Amerika dahshat tarixi” serialidagi epizodik roldan bo‘shatishadi, ustiga-ustak sevgilisi ham narsalarini olib ketib qoladi. “Yarim tun kovboyi” seansida Saymon o‘z karerasini qayta tiklashga urinayotgan yana bir omadsiz aktyor — terrorchi Mandarin rolini ijro etgani bilan tanilgan Trevor Sleteri bilan tanishadi. Trevor undan nufuzli yevropalik rejissyor Saymonning bolalikdagi sevimli filmi — “Mo‘jiza-odam” remeykini suratga olishni rejalayotganini aytadi. Endi ular rollar uchun kurashadi (Saymon — bosh qahramon, Trevor — uning xoin do‘sti) va shu jarayonda o‘rtalarida do‘stlik paydo bo‘ladi.",
+  actors: [ {tmdbId:1639847}, {tmdbId:457386}, {tmdbId:2282} ],
+    images:[
+      "https://variety.com/wp-content/uploads/2026/01/WonderMan1.jpg?w=1024", 
+      "https://static01.nyt.com/images/2026/02/05/multimedia/05cul-wonderman-notebook-fljh/05cul-wonderman-notebook-fljh-articleLarge.jpg?quality=75&auto=webp&disable=upscale", 
+       "https://i0.wp.com/www.micropsiacine.com/wp-content/uploads/2026/01/wonder-man-marvel.webp?fit=1200%2C675&ssl=1",
+      "https://m.media-amazon.com/images/M/MV5BNzRmYzZlODQtNDdlYy00NWMzLWJkMmYtMDk0YmEzMTQ1MGY3XkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg"]
+},  
+
           {title:"Ta'tildagi qotil / Baxtsiz Xodisa 2 ",
    sliderIcon:"https://m.media-amazon.com/images/S/pv-target-images/8d03123f4d2dbfe84c3f9f96ced4c6aa765be96831076184343f4d8cbc98ead6._SX1080_FMjpg_.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://files.itv.uz/uploads/content/poster/2023/10/24/6f6daec10bbdbdd85c525bb7bd177884-q-700x1002.jpeg",
@@ -79,7 +97,7 @@ const moviesData=[
    { title:"Yengilmas / Invinsible",
       sliderIcon:"https://miro.medium.com/1*TQusJA0dGM2IA7H_VrqOsw.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://upload.wikimedia.org/wikipedia/en/0/09/Invincible_season_2_Poster.jpg",
-    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2"],
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2","premium"],
     type:"anime",
     genre:"Triller • Jangari • Fantastika",
     desc:"17 yoshli Mark Greyson er yuzidagi eng kuchli superqahramonning o'g'lidir va tez orada uning o'zi ham super kuchlarga ega bo'lishi va ularni boshqarishni o'rganishi kerak.",
