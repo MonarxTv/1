@@ -1,6 +1,7 @@
 const shortsData=[
 {src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
-,{src:"https://kinochi.net/uploads/450x450/e975b8ad0a1a30cb2d347215dd6733d3.jpg",video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"},
+,{src:"https://kinochi.net/uploads/450x450/e975b8ad0a1a30cb2d347215dd6733d3.jpg",
+  index: 120 , video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"},
 ,{src:"https://m.media-amazon.com/images/M/MV5BYWQwMGRhNGEtZTNhMy00MzVjLWJhMjItYjcwMDljMTkyNTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",video:"https://www.youtube.com/embed/Tf6Ear0YERw?autoplay=1&mute=0&controls=1"},
 {src:"https://static.wikia.nocookie.net/the-undisputed/images/0/06/3492284-3985753880-13072.jpg/revision/latest?cb=20170520122605",video:"https://www.youtube.com/embed/zb41Clew1Fw?autoplay=1&mute=0&controls=1"},
 
@@ -85,6 +86,7 @@ const moviesData=[
   image:"https://movie-reviews.com.au/sites/default/files/ReviewImages/predator_badlands_ver3.jpg",
     video:["https://vk.com/video_ext.php?oid=-234817045&id=456239031&hd=2"],
     type:"movie",
+   index: 120 , 
     genre:"Jangari • Triller • Fantastika",
     desc:"O'z urug'idan quvilgan yosh Yirtqich buzilgan androidda kutilmagan ittifoqchi topadi va asosiy dushmanni qidirish uchun xavfli safarga chiqadi.",
   actors: [ {tmdbId:18050} ],
