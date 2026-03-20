@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barchasi</title>
+
+<link rel="stylesheet" href="2style.css">
+
+<style>
+body{
+  margin:0;
+  background:#020617;
+  color:#fff;
+  font-family:sans-serif;
+}
+
+/* HEADER */
+.header{
+  padding:18px;
+  font-size:20px;
+  font-weight:600;
+  background:linear-gradient(90deg,#020617,#0f172a);
+  border-bottom:1px solid #1e293b;
+}
+
+/* SEARCH */
+.search-box{
+  padding:10px 15px;
+}
+
+.search-box input{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  background:#1e293b;
+  color:#fff;
+}
+
+/* CONTAINER */
+.container{
+  padding:15px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:15px;
+}
+
+/* CARD */
+.card{
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card div{
+  padding:8px;
+  font-size:14px;
+}
+
+/* EMPTY */
+.empty{
+  text-align:center;
+  padding:40px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header" id="title">Barchasi</div>
+
+<div class="search-box">
+  <input id="searchInput" placeholder="Qidiruv...">
+</div>
+
+<div class="container">
+  <div id="grid" class="grid"></div>
+</div>
+
+<script src="3data.js"></script>
+
+<script>
+// ==================== PARAMS ====================
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+const genre = params.get("genre");
+
+const grid = document.getElementById("grid");
+const title = document.getElementById("title");
+const searchInput = document.getElementById("searchInput");
+
+// ==================== OPEN ====================
+function openMovie(item){
+  const index = moviesData.indexOf(item);
+  if(index !== -1){
+    window.location.href = `list.html?id=${index}`;
+  }
+}
+
+// ==================== FILTER ====================
+let baseList = [];
+
+if(type){
+  baseList = moviesData.filter(m => m.type === type);
+
+  if(type==="movie") title.textContent="🎬 Barcha kinolar";
+  if(type==="series") title.textContent="📺 Barcha seriallar";
+  if(type==="anime") title.textContent="🎌 Barcha animelar";
+}
+
+if(genre){
+  baseList = moviesData.filter(m => m.genre.includes(genre));
+  title.textContent = `🎭 ${genre}`;
+}
+
+// default fallback
+if(!type && !genre){
+  baseList = moviesData;
+}
+
+// ==================== RENDER ====================
+function render(list){
+  grid.innerHTML="";
+
+  if(list.length === 0){
+    grid.innerHTML = `<div class="empty">Hech narsa topilmadi</div>`;
+    return;
+  }
+
+  list.forEach(item=>{
+    const div=document.createElement("div");
+    div.className="card";
+
+    div.innerHTML=`
+      <img src="${item.image}">
+      <div>${item.title}</div>
+    `;
+
+    div.onclick=()=>openMovie(item);
+
+    grid.appendChild(div);
+  });
+}
+
+// ==================== SEARCH ====================
+searchInput.addEventListener("input", ()=>{
+  const q = searchInput.value.toLowerCase();
+
+  const filtered = baseList.filter(m =>
+    m.title.toLowerCase().includes(q)
+  );
+
+  render(filtered);
+});
+
+// ==================== INIT ====================
+render(baseList);
+</script>
+
+</body>
+</html>
