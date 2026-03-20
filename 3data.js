@@ -1,6 +1,7 @@
 const shortsData=[
-{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
-,{src:"https://kinochi.net/uploads/450x450/e975b8ad0a1a30cb2d347215dd6733d3.jpg", video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"},
+{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872" ,video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
+,{src:"https://kinochi.net/uploads/450x450/e975b8ad0a1a30cb2d347215dd6733d3.jpg",
+   video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"},
 ,{src:"https://m.media-amazon.com/images/M/MV5BYWQwMGRhNGEtZTNhMy00MzVjLWJhMjItYjcwMDljMTkyNTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",video:"https://www.youtube.com/embed/Tf6Ear0YERw?autoplay=1&mute=0&controls=1"},
 {src:"https://static.wikia.nocookie.net/the-undisputed/images/0/06/3492284-3985753880-13072.jpg/revision/latest?cb=20170520122605",video:"https://www.youtube.com/embed/zb41Clew1Fw?autoplay=1&mute=0&controls=1"},
 
@@ -8,6 +9,52 @@ const shortsData=[
 
 
 const moviesData=[
+    { title:"Yigitlar / The boys",
+      sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+    image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
+    video:["https://m.uzmovie.me/s/2026/yigitlar/yigitlar_1.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_2.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_3.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_4.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_5.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_6.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_7.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_8.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_9.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_10.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_11.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_12.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_13.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_14.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_15.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_16.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_17.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_18.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_19.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_20.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_21.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_22.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_23.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_24.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_25.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_26.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_27.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_28.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_29.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_30.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_31.mp4",
+"https://m.uzmovie.me/s/2026/yigitlar/yigitlar_32.mp4" ],
+    type:"series",
+    genre:"Qo‘rqinchli • Triller • Fantastika",
+    desc:"Serialning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
+     actors: [ {tmdbId:1372}, {tmdbId:1030513}, {tmdbId:60373}, {tmdbId:990393}, {tmdbId:198847}, {tmdbId:1461608}, {tmdbId:10964}, {tmdbId:1550587}, {tmdbId:60899}, {tmdbId:115146}, {tmdbId:49624}, {tmdbId:1157294}, {tmdbId:229422}, {tmdbId:1443420}, {tmdbId:1696015}, {tmdbId:4808}, {tmdbId:47296}, {tmdbId:3084833}, {tmdbId:1181426}, {tmdbId:11108} ],
+    images:[
+      "https://bloody-disgusting.com/wp-content/uploads/2020/11/the-boys-gore.png",     "https://pyxis.nymag.com/v1/imgs/d12/177/4ef088a72d82ae2c1c8424ed7baf4c8e98-the-boys-ep-5.2x.rsocial.w600.jpg",
+      "https://fwmedia.fandomwire.com/wp-content/uploads/2025/12/06123350/the-boys-season-5-starlight-twist-theory.jpg",
+"https://www.giantfreakinrobot.com/wp-content/uploads/2024/07/the-boys-billy-butcher-tentacles-karl-urban-900x506.jpg"
+    ]
+  }, 
+
           {title:"G'aroyib odam ",
    sliderIcon:"https://i.ytimg.com/vi/0wv4ZcuSrUQ/maxresdefault.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://www.panavision.com/images/default-source/credits/credit_poster_wonder_man-350x525-304836a.jpg?sfvrsn=f548e9f8_1https://idup.tv/uploads/posts/2026-03/fabrika-formatovximage8a2b7172b11f92dc_png_pagespeed_ic_habcdodgsa.jpg",
@@ -52,20 +99,6 @@ const moviesData=[
        "https://kungfukingdom.com/wp-content/uploads/2018/02/Mike-doesnt-see-eye-to-eye-with-Charlie.jpg",
       "https://filmcombatsyndicate.com/wp-content/uploads/2018/02/1517312455-1874481572-neschastnyy-sluchay-3-1024x650-1024x585.jpg"]
 }, 
-    { title:"Yigitlar / The boys",
-      sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-    image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
-    video:["https://vk.com/video_ext.php?oid=-236571148&id=456239018&hd=2","https://vk.com/video_ext.php?oid=-236571148&id=456239025&hd=2","https://vk.com/video_ext.php?oid=-236571148&id=456239026&hd=2" ],
-    type:"series",
-    genre:"Qo‘rqinchli • Triller • Fantastika",
-    desc:"Serialning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
-     actors: [ {tmdbId:1372}, {tmdbId:1030513}, {tmdbId:60373}, {tmdbId:990393}, {tmdbId:198847}, {tmdbId:1461608}, {tmdbId:10964}, {tmdbId:1550587}, {tmdbId:60899}, {tmdbId:115146}, {tmdbId:49624}, {tmdbId:1157294}, {tmdbId:229422}, {tmdbId:1443420}, {tmdbId:1696015}, {tmdbId:4808}, {tmdbId:47296}, {tmdbId:3084833}, {tmdbId:1181426}, {tmdbId:11108} ],
-    images:[
-      "https://bloody-disgusting.com/wp-content/uploads/2020/11/the-boys-gore.png",     "https://pyxis.nymag.com/v1/imgs/d12/177/4ef088a72d82ae2c1c8424ed7baf4c8e98-the-boys-ep-5.2x.rsocial.w600.jpg",
-      "https://fwmedia.fandomwire.com/wp-content/uploads/2025/12/06123350/the-boys-season-5-starlight-twist-theory.jpg",
-"https://www.giantfreakinrobot.com/wp-content/uploads/2024/07/the-boys-billy-butcher-tentacles-karl-urban-900x506.jpg"
-    ]
-  }, 
       {title:"Kelajak Urushi",
    sliderIcon:"https://api.toolofna.com/wp-content/uploads/2022/09/The_Tomorrow_War-1024x576-1.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://m.media-amazon.com/images/S/pv-target-images/63cd50771d0b5c6c8bb5077db8de02fbbe298754744d6f96b173e6c7fd549214.jpg",
@@ -84,7 +117,7 @@ const moviesData=[
    sliderIcon:"https://www.joblo.com/wp-content/uploads/2025/10/predator-badlands-8-1280x720.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://movie-reviews.com.au/sites/default/files/ReviewImages/predator_badlands_ver3.jpg",
     video:["https://vk.com/video_ext.php?oid=-234817045&id=456239031&hd=2"],
-    type:"movie", 
+    type:"movie",
     genre:"Jangari • Triller • Fantastika",
     desc:"O'z urug'idan quvilgan yosh Yirtqich buzilgan androidda kutilmagan ittifoqchi topadi va asosiy dushmanni qidirish uchun xavfli safarga chiqadi.",
   actors: [ {tmdbId:18050} ],
@@ -98,7 +131,7 @@ const moviesData=[
    { title:"Yengilmas / Invinsible",
       sliderIcon:"https://miro.medium.com/1*TQusJA0dGM2IA7H_VrqOsw.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://upload.wikimedia.org/wikipedia/en/0/09/Invincible_season_2_Poster.jpg",
-    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2","premium"],
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2","premium","https://uzbeklar.biz/5730-yigitlar.html"],
     type:"anime",
     genre:"Triller • Jangari • Fantastika",
     desc:"17 yoshli Mark Greyson er yuzidagi eng kuchli superqahramonning o'g'lidir va tez orada uning o'zi ham super kuchlarga ega bo'lishi va ularni boshqarishni o'rganishi kerak.",
