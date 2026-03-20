@@ -110,76 +110,58 @@ if(safe(searchBtn)){
   searchBtn.onclick=()=>window.location.href="search.html";
 }
 
-// ==================== 🔥 SLIDER (SMOOTH + INFINITE) ====================
-let currentIndex = 0;
-let autoSlide;
-
-function initSlider(){
-  if(!safe(premieresInner)) return;
-
-  const cards = premieresInner.children;
-  if(cards.length === 0) return;
-
-  const first = cards[0].cloneNode(true);
-  const last = cards[cards.length - 1].cloneNode(true);
-
-  premieresInner.appendChild(first);
-  premieresInner.insertBefore(last, cards[0]);
-
-  currentIndex = 1;
-  updateSlider(true);
-}
+// ==================== SLIDER ====================
+let premiereIndex = 0;
 
 function getCardWidth(){
+  if(!safe(premieresInner)) return 0;
+
   const card = premieresInner.querySelector(".card");
   if(!card) return 0;
+
   return card.offsetWidth + 12;
 }
 
-function updateSlider(instant=false){
-  const width = getCardWidth();
-  if(width === 0) return;
-
-  premieresInner.style.transition = instant ? "none" : "transform 0.5s ease";
-  premieresInner.style.transform = `translateX(-${currentIndex * width}px)`;
+function updateSlider(){
+  const cardWidth = getCardWidth();
+  premieresInner.style.transition = "transform 0.4s ease";
+  premieresInner.style.transform = `translateX(-${premiereIndex * cardWidth}px)`;
 }
 
+// ▶️ NEXT
 function nextSlide(){
-  currentIndex++;
-  updateSlider();
+  if(!safe(premieresInner)) return;
 
-  if(currentIndex === premieresInner.children.length - 1){
-    setTimeout(()=>{
-      currentIndex = 1;
-      updateSlider(true);
-    }, 500);
+  premiereIndex++;
+
+  if(premiereIndex >= premieresInner.children.length){
+    premiereIndex = 0;
   }
+
+  updateSlider();
 }
 
+// ◀️ PREV
 function prevSlide(){
-  currentIndex--;
-  updateSlider();
+  if(!safe(premieresInner)) return;
 
-  if(currentIndex === 0){
-    setTimeout(()=>{
-      currentIndex = premieresInner.children.length - 2;
-      updateSlider(true);
-    }, 500);
+  premiereIndex--;
+
+  if(premiereIndex < 0){
+    premiereIndex = premieresInner.children.length - 1;
   }
+
+  updateSlider();
 }
 
-function startAutoSlide(){
-  autoSlide = setInterval(nextSlide, 4000);
-}
+// AUTO SLIDE
+let sliderInterval = setInterval(nextSlide, 5000);
 
-function resetAutoSlide(){
-  clearInterval(autoSlide);
-  startAutoSlide();
+// RESET TIMER
+function resetSlider(){
+  clearInterval(sliderInterval);
+  sliderInterval = setInterval(nextSlide, 5000);
 }
-
-// INIT
-initSlider();
-startAutoSlide();
 
 // ==================== TOUCH ====================
 if(safe(premieresInner)){
@@ -187,7 +169,6 @@ if(safe(premieresInner)){
 
   premieresInner.addEventListener("touchstart", e=>{
     startX = e.touches[0].clientX;
-    clearInterval(autoSlide);
   });
 
   premieresInner.addEventListener("touchend", e=>{
@@ -195,11 +176,13 @@ if(safe(premieresInner)){
     const diff = startX - endX;
 
     if(diff > 50){
-      nextSlide();
-    } else if(diff < -50){
-      prevSlide();
+      nextSlide(); // 👉 chapga surish
+      resetSlider();
     }
 
-    resetAutoSlide();
+    if(diff < -50){
+      prevSlide(); // 👉 o‘ngga surish
+      resetSlider();
+    }
   });
 }
