@@ -32,13 +32,23 @@ body{
 /* PLAYER */
 #playerContainer{
   width:100%;
+  height:56.25vw;
   background:#000;
   border-radius:12px;
   overflow:hidden;
   margin-bottom:15px;
-   height: 56.25vw; /* 16:9 nisbat, gorizontal ekranda to‘g‘ri chiqadi */
+  position:relative;
 }
 
+#playerContainer iframe,
+#playerContainer video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
 /* EPISODES */
 #episodes{
   display:flex;
