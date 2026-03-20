@@ -82,8 +82,17 @@ function createSlide(item){
   const div = document.createElement("div");
   div.className = "slide";
 
+  let videoUrl = item.video;
+
+  // 🔥 YouTube bo‘lsa loop qo‘shamiz
+  if(videoUrl.includes("youtube.com")){
+    const videoId = videoUrl.split("/embed/")[1].split("?")[0];
+
+    videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=1&loop=1&playlist=${videoId}`;
+  }
+
   div.innerHTML = `
-    <iframe src="${item.video}" allow="autoplay; fullscreen"></iframe>
+    <iframe src="${videoUrl}" allow="autoplay; fullscreen"></iframe>
   `;
 
   return div;
