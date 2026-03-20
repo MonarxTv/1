@@ -81,8 +81,8 @@ const moviesData=[
       "https://ew.com/thmb/XUa27eLzN2sdlUobJhuCzNJQL84=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-tomorrow-war-1-bede5ae8a52541afaefe6f30880690d5.jpg"]
 }, 
   {title:"Yirtqich Yovvoyi yerlar",
-   sliderIcon:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-  image:"https://cdn.fastora.uz/poster_8146002445_1764176088.jpg",
+   sliderIcon:"https://www.joblo.com/wp-content/uploads/2025/10/predator-badlands-8-1280x720.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://movie-reviews.com.au/sites/default/files/ReviewImages/predator_badlands_ver3.jpg",
     video:["https://vk.com/video_ext.php?oid=-234817045&id=456239031&hd=2"],
     type:"movie",
     genre:"Jangari • Triller • Fantastika",
