@@ -5,32 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shorts</title>
 
-<link rel="stylesheet" href="2style.css">
-
 <style>
 body{
   margin:0;
   background:#000;
-  color:#fff;
-  font-family:sans-serif;
   overflow:hidden;
+  font-family:sans-serif;
 }
 
-/* HEADER */
-.header{
-  padding:15px;
-  text-align:center;
-  font-size:18px;
-  font-weight:600;
-  border-bottom:1px solid #111;
-}
-
-/* WRAPPER */
+/* FULL SCREEN */
 .wrapper{
-  height:calc(100vh - 60px);
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  height:100vh;
+  width:100%;
+  position:relative;
   overflow:hidden;
 }
 
@@ -38,8 +25,7 @@ body{
 .slider{
   position:relative;
   width:100%;
-  height:500px;
-  overflow:hidden;
+  height:100%;
 }
 
 /* SLIDE */
@@ -47,7 +33,7 @@ body{
   position:absolute;
   width:100%;
   height:100%;
-  transition:transform 0.4s ease, opacity 0.4s ease;
+  transition:transform 0.4s ease;
 }
 
 /* VIDEO */
@@ -55,28 +41,28 @@ iframe{
   width:100%;
   height:100%;
   border:none;
-  border-radius:12px;
 }
 
-/* TITLE */
-.title{
-  text-align:center;
-  margin-top:10px;
-  color:#94a3b8;
-  font-size:14px;
+/* 🔥 SWIPE LAYER (ENG MUHIM) */
+.swipe-layer{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:10;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">Shorts</div>
-
 <div class="wrapper">
   <div class="slider" id="slider"></div>
-</div>
 
-<div class="title" id="title"></div>
+  <!-- 🔥 BUTUN EKRAN SWIPE -->
+  <div class="swipe-layer" id="swipeLayer"></div>
+</div>
 
 <script src="3data.js"></script>
 
@@ -86,7 +72,7 @@ const params = new URLSearchParams(window.location.search);
 let index = parseInt(params.get("id")) || 0;
 
 const slider = document.getElementById("slider");
-const title = document.getElementById("title");
+const swipeLayer = document.getElementById("swipeLayer");
 
 let startY = 0;
 let isDragging = false;
@@ -113,8 +99,6 @@ function render(){
   const currentSlide = createSlide(current);
   currentSlide.style.transform = "translateY(0)";
   slider.appendChild(currentSlide);
-
-  title.textContent = current.title || "";
 }
 
 // ==================== NEXT ====================
@@ -151,22 +135,36 @@ function prev(){
   setTimeout(render, 400);
 }
 
-// ==================== TOUCH ====================
-document.addEventListener("touchstart", e=>{
+// ==================== 🔥 TOUCH (BUTUN EKRAN) ====================
+swipeLayer.addEventListener("touchstart", e=>{
   startY = e.touches[0].clientY;
   isDragging = true;
 });
 
-document.addEventListener("touchend", e=>{
+swipeLayer.addEventListener("touchend", e=>{
   if(!isDragging) return;
 
   const endY = e.changedTouches[0].clientY;
   const diff = startY - endY;
 
-  if(diff > 50) next();   // yuqoriga swipe
-  if(diff < -50) prev();  // pastga swipe
+  if(diff > 50) next();     // yuqoriga
+  if(diff < -50) prev();    // pastga
 
   isDragging = false;
+});
+
+// ==================== DESKTOP (MOUSE DRAG) ====================
+let mouseStart = 0;
+
+swipeLayer.addEventListener("mousedown", e=>{
+  mouseStart = e.clientY;
+});
+
+swipeLayer.addEventListener("mouseup", e=>{
+  const diff = mouseStart - e.clientY;
+
+  if(diff > 50) next();
+  if(diff < -50) prev();
 });
 
 // ==================== KEYBOARD ====================
