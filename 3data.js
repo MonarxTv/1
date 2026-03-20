@@ -9,6 +9,28 @@ const shortsData=[
 
 
 const moviesData=[
+           {title:"Yuruvchi Murdalar",
+   sliderIcon:"https://m.media-amazon.com/images/S/pv-target-images/2bda3bbd1584dc6748455880dfbf6aa43394ebcf007486f4d6d9bc9300fd9fef._UR1920,1080_SX624_FMjpg_.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://i.amediateka.tech/resize/%7BSIZE%7D/_stor_/cms/content-contentasset/5/f9/a4d28db84325289b295094bc17f395f9-267721-c9c713571d53431b91033683f5be56b4.jpg",
+    video:["https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%201-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%202-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%203-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%201-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%202-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%203-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%201-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%202-qism%20O'zbek%20tilida%20(asilmedia.net).mp4",
+"https://fayllar1.ru/15/Seriallar/Yuruvchi%20Murdalar%201-16/Yuruvchi%20murdalar%20AQSH%20seriali%203-qism%20O'zbek%20tilida%20(asilmedia.net).mp4"],
+    type:"movie",
+    genre:"Jangari • Triller • Qo‘rqinchli",
+    desc:"Seriya sherif oilasining zombi dan keyingi hayoti haqida hikoya qiladi - butun dunyoni apokaliptik nisbatlar epidemiyasi qamrab oldi. Sherif Rik Grimes oilasi va tirik qolganlarning kichik guruhi bilan xavfsiz yashash joyini izlab sayohat qiladi. Ammo doimiy o'lim qo'rquvi har kuni katta yo'qotishlarga olib keladi va qahramonlarga insoniyatning shafqatsizligining tubini his qiladi. Rik o'z oilasini qutqarishga harakat qiladi va tirik qolganlarning qo'rquvi er yuzida yurgan aqlsiz o'liklardan ko'ra xavfliroq ekanligini biladi.",
+  actors: [ {tmdbId:7062},{tmdbId:4886},{tmdbId:62220},{tmdbId:47296},{tmdbId:84224},{tmdbId:31535},{tmdbId:1252310},{tmdbId:12132},{tmdbId:82104},{tmdbId:215056},{tmdbId:555249} ],
+    images:[
+      "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/d149012a-cc26-443d-a9d3-a96a597066ad/2560x", 
+      "https://i.ytimg.com/vi/_c7pRMzeJ8U/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEsgZShLMA8=&rs=AOn4CLA9SokvHzIrzWQ1G6RenUHIBePRvw", 
+       "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/9d4e8650-c3c9-4bdf-ba3b-6b45731f8b42/2560x",
+      "https://www.indiewire.com/wp-content/uploads/2016/07/the-walking-dead.jpg?w=600&h=337&crop=1"]
+}, 
     { title:"Yigitlar / The boys",
       sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
