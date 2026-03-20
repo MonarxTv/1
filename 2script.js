@@ -9,13 +9,9 @@ const seriesContainer = document.getElementById("series");
 const genresContainer = document.getElementById("genres");
 const premieresInner = document.getElementById("premieres-inner");
 const shortsContainer = document.getElementById("shorts");
-
-const listModal = document.getElementById("listModal");
-const listModalContent = document.getElementById("listModalContent");
-
 const searchBtn = document.getElementById("searchBtn");
 
-// ==================== SAFE CHECK ====================
+// ==================== SAFE ====================
 function safe(el){ return el !== null && el !== undefined; }
 
 // ==================== OPEN MOVIE ====================
@@ -25,13 +21,27 @@ function openMovie(item){
   window.location.href = `list.html?id=${index}`;
 }
 
+// ==================== FULL PAGE ====================
+function openFullPage(type){
+  window.location.href = `full.html?type=${type}`;
+}
+
+function openGenrePage(genre){
+  window.location.href = `full.html?genre=${encodeURIComponent(genre)}`;
+}
+
 // ==================== PREMIERES ====================
 if(safe(premieresInner)){
   premieresData.forEach(item=>{
     const div=document.createElement("div");
     div.className="card";
-    div.innerHTML=`<img src="${item.sliderIcon}"><div>${item.title}</div>`;
-    div.onclick=()=>openMovie(item);
+
+    div.innerHTML = `
+      <img src="${item.sliderIcon}">
+      <div>${item.title}</div>
+    `;
+
+    div.onclick = ()=>openMovie(item);
     premieresInner.appendChild(div);
   });
 }
@@ -45,8 +55,13 @@ function renderCards(arr, container){
   arr.slice(0,3).forEach(item=>{
     const d=document.createElement("div");
     d.className="card";
-    d.innerHTML=`<img src="${item.image}"><div>${item.title}</div>`;
-    d.onclick=()=>openMovie(item);
+
+    d.innerHTML = `
+      <img src="${item.image}">
+      <div>${item.title}</div>
+    `;
+
+    d.onclick = ()=>openMovie(item);
     container.appendChild(d);
   });
 }
@@ -55,39 +70,10 @@ renderCards(moviesData.filter(m=>m.type==="movie"), moviesContainer);
 renderCards(moviesData.filter(m=>m.type==="series"), seriesContainer);
 renderCards(moviesData.filter(m=>m.type==="anime"), animeContainer);
 
-// ==================== LIST MODAL ====================
-function openListModal(items){
-  if(!safe(listModal) || !safe(listModalContent)) return;
-
-  listModalContent.innerHTML="";
-
-  items.forEach(item=>{
-    const div=document.createElement("div");
-    div.className="card";
-    div.innerHTML=`<img src="${item.image}"><div>${item.title}</div>`;
-    div.onclick=()=>openMovie(item);
-    listModalContent.appendChild(div);
-  });
-
-  listModal.style.display="flex";
-}
-
-function closeListModal(){
-  if(safe(listModal)) listModal.style.display="none";
-}
-
-// ==================== "BARCHASI" ====================
-document.getElementById("moviesMore")?.addEventListener("click", ()=>{
-  openListModal(moviesData.filter(m=>m.type==="movie"));
-});
-
-document.getElementById("seriesMore")?.addEventListener("click", ()=>{
-  openListModal(moviesData.filter(m=>m.type==="series"));
-});
-
-document.getElementById("animeMore")?.addEventListener("click", ()=>{
-  openListModal(moviesData.filter(m=>m.type==="anime"));
-});
+// ==================== BARCHASI ====================
+document.getElementById("allMoviesBtn")?.addEventListener("click", ()=>openFullPage("movie"));
+document.getElementById("allSeriesBtn")?.addEventListener("click", ()=>openFullPage("series"));
+document.getElementById("allAnimeBtn")?.addEventListener("click", ()=>openFullPage("anime"));
 
 // ==================== GENRES ====================
 if(safe(genresContainer)){
@@ -95,13 +81,7 @@ if(safe(genresContainer)){
     const s=document.createElement("span");
     s.textContent=g;
     s.style.cursor="pointer";
-
-    s.onclick=()=>{
-      openListModal(
-        moviesData.filter(m=>m.genre.includes(g))
-      );
-    };
-
+    s.onclick=()=>openGenrePage(g);
     genresContainer.appendChild(s);
   });
 }
@@ -115,11 +95,10 @@ function renderShorts(){
   shortsData.forEach((item, idx)=>{
     const div=document.createElement("div");
     div.className="short";
+
     div.innerHTML=`<img src="${item.src}">`;
 
-    div.onclick=()=>{
-      window.location.href=`short.html?id=${idx}`;
-    };
+    div.onclick=()=>window.location.href=`short.html?id=${idx}`;
 
     shortsContainer.appendChild(div);
   });
@@ -128,98 +107,99 @@ renderShorts();
 
 // ==================== SEARCH ====================
 if(safe(searchBtn)){
-  searchBtn.onclick=()=>{
-    window.location.href="search.html";
-  };
+  searchBtn.onclick=()=>window.location.href="search.html";
 }
 
-// ==================== ACTOR CLICK (UNIVERSAL) ====================
-function attachActorClick(container){
-  if(!safe(container)) return;
+// ==================== 🔥 SLIDER (SMOOTH + INFINITE) ====================
+let currentIndex = 0;
+let autoSlide;
 
-  container.querySelectorAll(".actor-item").forEach(el=>{
-    const id = el.getAttribute("data-id");
-
-    if(id){
-      el.onclick=()=>{
-        window.location.href=`actor.html?id=${id}`;
-      };
-    }
-  });
-}
-
-// ==================== SLIDER ====================
-let premiereOffset=0;
-
-function getCardWidth(){
-  if(!safe(premieresInner)) return 0;
-
-  const card=premieresInner.querySelector(".card");
-  if(!card) return 0;
-
-  return card.offsetWidth+12;
-}
-
-function slidePremieres(){
+function initSlider(){
   if(!safe(premieresInner)) return;
 
-  const cardWidth=getCardWidth();
-  if(cardWidth === 0) return;
+  const cards = premieresInner.children;
+  if(cards.length === 0) return;
 
-  premiereOffset+=cardWidth;
+  const first = cards[0].cloneNode(true);
+  const last = cards[cards.length - 1].cloneNode(true);
 
-  if(premiereOffset>=cardWidth*premieresInner.children.length){
-    premiereOffset=0;
-  }
+  premieresInner.appendChild(first);
+  premieresInner.insertBefore(last, cards[0]);
 
-  premieresInner.style.transform=`translateX(-${premiereOffset}px)`;
+  currentIndex = 1;
+  updateSlider(true);
 }
 
-setInterval(slidePremieres,5000);
+function getCardWidth(){
+  const card = premieresInner.querySelector(".card");
+  if(!card) return 0;
+  return card.offsetWidth + 12;
+}
+
+function updateSlider(instant=false){
+  const width = getCardWidth();
+  if(width === 0) return;
+
+  premieresInner.style.transition = instant ? "none" : "transform 0.5s ease";
+  premieresInner.style.transform = `translateX(-${currentIndex * width}px)`;
+}
+
+function nextSlide(){
+  currentIndex++;
+  updateSlider();
+
+  if(currentIndex === premieresInner.children.length - 1){
+    setTimeout(()=>{
+      currentIndex = 1;
+      updateSlider(true);
+    }, 500);
+  }
+}
+
+function prevSlide(){
+  currentIndex--;
+  updateSlider();
+
+  if(currentIndex === 0){
+    setTimeout(()=>{
+      currentIndex = premieresInner.children.length - 2;
+      updateSlider(true);
+    }, 500);
+  }
+}
+
+function startAutoSlide(){
+  autoSlide = setInterval(nextSlide, 4000);
+}
+
+function resetAutoSlide(){
+  clearInterval(autoSlide);
+  startAutoSlide();
+}
+
+// INIT
+initSlider();
+startAutoSlide();
 
 // ==================== TOUCH ====================
 if(safe(premieresInner)){
-  let startX=0,isDragging=false;
+  let startX = 0;
 
-  premieresInner.addEventListener("touchstart",e=>{
-    startX=e.touches[0].clientX;
-    isDragging=true;
+  premieresInner.addEventListener("touchstart", e=>{
+    startX = e.touches[0].clientX;
+    clearInterval(autoSlide);
   });
 
-  premieresInner.addEventListener("touchmove",e=>{
-    if(!isDragging) return;
+  premieresInner.addEventListener("touchend", e=>{
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
 
-    const diff=startX-e.touches[0].clientX;
-
-    if(diff>30){
-      slidePremieres();
-      isDragging=false;
+    if(diff > 50){
+      nextSlide();
+    } else if(diff < -50){
+      prevSlide();
     }
+
+    resetAutoSlide();
   });
-
-  premieresInner.addEventListener("touchend",()=>{
-    isDragging=false;
-  });
-}
-// ==================== 🔥 BARCHASI ====================
-const allMoviesBtn = document.getElementById("allMoviesBtn");
-const allSeriesBtn = document.getElementById("allSeriesBtn");
-const allAnimeBtn = document.getElementById("allAnimeBtn");
-
-if(allMoviesBtn){
-  allMoviesBtn.onclick = ()=>{
-    openListModal(moviesData.filter(m=>m.type==="movie"));
-  };
-}
-
-if(allSeriesBtn){
-  allSeriesBtn.onclick = ()=>{
-    openListModal(moviesData.filter(m=>m.type==="series"));
-  };
-}
-
-if(allAnimeBtn){
-  allAnimeBtn.onclick = ()=>{
-    openListModal(moviesData.filter(m=>m.type==="anime"));
-  };
 }
