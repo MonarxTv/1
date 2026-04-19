@@ -19,9 +19,9 @@ const moviesData=[
     desc:"ning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
      actors: [ {tmdbId:1372}, {tmdbId:1030513}, {tmdbId:60373}, {tmdbId:990393}, {tmdbId:198847}, {tmdbId:1461608}, {tmdbId:10964}, {tmdbId:1550587}, {tmdbId:60899}, {tmdbId:115146}, {tmdbId:49624}, {tmdbId:1157294}, {tmdbId:229422}, {tmdbId:1443420}, {tmdbId:1696015}, {tmdbId:4808}, {tmdbId:47296}, {tmdbId:3084833}, {tmdbId:1181426}, {tmdbId:11108} ],
     images:[
-      "https://bloody-disgusting.com/wp-content/uploads/2020/11/the-boys-gore.png",     "https://pyxis.nymag.com/v1/imgs/d12/177/4ef088a72d82ae2c1c8424ed7baf4c8e98-the-boys-ep-5.2x.rsocial.w600.jpg",
-      "https://fwmedia.fandomwire.com/wp-content/uploads/2025/12/06123350/the-boys-season-5-starlight-twist-theory.jpg",
-"https://www.giantfreakinrobot.com/wp-content/uploads/2024/07/the-boys-billy-butcher-tentacles-karl-urban-900x506.jpg"
+      "https://m.media-amazon.com/images/M/MV5BNWQxODRmNzAtZGY5Mi00YTBlLTk1YzgtYjk3MGQxMjkwMmU3XkEyXkFqcGc@._V1_.jpg",     "https://helios-i.mashable.com/imagery/articles/06h4MPjJiDJ8kaL6Wq9DnP0/hero-image.fill.size_1248x702.v1775240171.jpg",
+      "https://cdn.mos.cms.futurecdn.net/8uFMcMWfhEBRXrhjhKFrKA.jpg",
+"https://i.ytimg.com/vi/LVHybM6Km4g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD1FItHOCDEMZ6nX4yd2jh5XB5IhA"
     ]
   }, 
            {title:"Urush mashinasi",
