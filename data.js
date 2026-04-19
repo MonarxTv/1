@@ -1,12 +1,3 @@
-const shortsData=[
-{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872" ,video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},
-,{src:"https://kinochi.net/uploads/450x450/e975b8ad0a1a30cb2d347215dd6733d3.jpg",
-   video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"},
-,{src:"https://m.media-amazon.com/images/M/MV5BYWQwMGRhNGEtZTNhMy00MzVjLWJhMjItYjcwMDljMTkyNTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",video:"https://www.youtube.com/embed/Tf6Ear0YERw?autoplay=1&mute=0&controls=1"},
-{src:"https://preview.redd.it/undisputed-2-v0-pcczpx29n7mf1.png?width=640&crop=smart&auto=webp&s=aa8d1afa1e0f76b09c489844ff62d44e72870283",video:"https://www.youtube.com/embed/zb41Clew1Fw?autoplay=1&mute=0&controls=1"},
-
-];
-
 
 const moviesData=[
       { title:"Yigitlar 5 fasl o'zbek tilida / The boys 5",
@@ -107,7 +98,6 @@ const moviesData=[
   }, 
 
           {title:"G'aroyib odam ",
-   sliderIcon:"https://i.ytimg.com/vi/0wv4ZcuSrUQ/maxresdefault.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://www.panavision.com/images/default-source/credits/credit_poster_wonder_man-350x525-304836a.jpg?sfvrsn=f548e9f8_1https://idup.tv/uploads/posts/2026-03/fabrika-formatovximage8a2b7172b11f92dc_png_pagespeed_ic_habcdodgsa.jpg",
     video:["https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%201-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%202-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%203-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%204-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%205-qism%20480p%20(asilmedia.net).mp4","https://fayllar1.ru/29/Seriallar/G'aroyib%20odam/G'aroyib%20odam%206-qism%20480p%20(asilmedia.net).mp4"],
     type:"series",
@@ -122,8 +112,7 @@ const moviesData=[
 },  
 
           {title:"Ta'tildagi qotil / Baxtsiz Xodisa 2 ",
-   sliderIcon:"https://m.media-amazon.com/images/S/pv-target-images/8d03123f4d2dbfe84c3f9f96ced4c6aa765be96831076184343f4d8cbc98ead6._SX1080_FMjpg_.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-  image:"https://files.itv.uz/uploads/content/poster/2023/10/24/6f6daec10bbdbdd85c525bb7bd177884-q-700x1002.jpeg",
+    image:"https://files.itv.uz/uploads/content/poster/2023/10/24/6f6daec10bbdbdd85c525bb7bd177884-q-700x1002.jpeg",
     video:["https://vk.com/video_ext.php?oid=-186124728&id=456246201&hd=2"],
     type:"movie",
     genre:"Jangari • Triller • Harbiy • Komediya",
@@ -137,7 +126,6 @@ const moviesData=[
 },  
   
       {title:"Baxtsiz Xodisa 1",
-   sliderIcon:"https://images.moviesanywhere.com/3ed321262b8b72b03ffdd4342a367787/a9d7999c-dd60-4756-91f7-7ee8c88d3125.jpg?w=2560&r=16x9", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://images.uzmovi.tv/ii/1621839448/fd9b13d3/34560358.jpg",
     video:["https://vk.com/video_ext.php?oid=-186124728&id=456241096&hd=2"],
     type:"movie",
@@ -151,8 +139,7 @@ const moviesData=[
       "https://filmcombatsyndicate.com/wp-content/uploads/2018/02/1517312455-1874481572-neschastnyy-sluchay-3-1024x650-1024x585.jpg"]
 }, 
       {title:"Kelajak Urushi",
-   sliderIcon:"https://api.toolofna.com/wp-content/uploads/2022/09/The_Tomorrow_War-1024x576-1.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-  image:"https://m.media-amazon.com/images/S/pv-target-images/63cd50771d0b5c6c8bb5077db8de02fbbe298754744d6f96b173e6c7fd549214.jpg",
+image:"https://m.media-amazon.com/images/S/pv-target-images/63cd50771d0b5c6c8bb5077db8de02fbbe298754744d6f96b173e6c7fd549214.jpg",
     video:["https://vk.com/video_ext.php?oid=-230696351&id=456239053&hd=2"],
     type:"movie",
     genre:"Jangari • Triller • Fantastika",
@@ -211,8 +198,7 @@ const moviesData=[
   },  
   
    {title:"Shavqat",
-   sliderIcon:"https://external-preview.redd.it/mercy-2026-v0-Quem9REyvU-ct60ZHxjL5Gf2xKafX_tksZtAvKPHLM4.jpeg?auto=webp&s=33e53d4ca581f18d248e3b0d1bec8277d01ded9e", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-  image:"https://regalcdn.azureedge.net/CW/Mercy/HO00014089/TV_SmallPosterImage/20251217-114928385.jpg",
+image:"https://regalcdn.azureedge.net/CW/Mercy/HO00014089/TV_SmallPosterImage/20251217-114928385.jpg",
     video:["https://vk.com/video_ext.php?oid=-232370190&id=456239063&hd=2"],
     type:"movie",
     genre:"Jangari • Kriminal • Fantastika",
@@ -226,7 +212,6 @@ const moviesData=[
 }, 
   
     {title:"Harbiy Asir",
-   sliderIcon:"https://www.martialjournal.com/wp-content/uploads/2026/02/POW1.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://m.media-amazon.com/images/M/MV5BN2JjMjNjNzItYWIzZS00YTliLWJjNjMtODAzYjI3ZGRmZGZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     video:["https://vk.com/video_ext.php?oid=-230237290&id=456239074&hd=2"],
     type:"movie",
@@ -242,7 +227,6 @@ const moviesData=[
 
  
   {title:"O'lmas SISU",
-   sliderIcon:"https://d6isf1yxni2j5.cloudfront.net/large_escena_sisu_1cb54705e2.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://upload.wikimedia.org/wikipedia/en/c/c0/Sisu_Road_to_Revenge.jpg",
     video:["https://vk.com/video_ext.php?oid=-186124728&id=456247864&hd=2"],
     type:"movie",
@@ -272,8 +256,7 @@ const moviesData=[
 }, 
   
   {title:"O'rgimchak odam: Uyga yo'l yo'q",
-       sliderIcon:"https://media.vanityfair.com/photos/612508e0b105ece2f5fa7ea3/master/pass/spider-man-no-way-home-film-still-01.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-    image:"https://freekino.net/storage/uploads/poster/orgimchak-odam-uyga-yol-yoq_1640324133.jpg",
+         image:"https://freekino.net/storage/uploads/poster/orgimchak-odam-uyga-yol-yoq_1640324133.jpg",
     video:["https://vk.com/video_ext.php?oid=-230288707&id=456239244&hd=2"],
     type:"movie",
     genre:"Fantastika • Sarguzasht",
@@ -289,7 +272,6 @@ const moviesData=[
 
   {
     title:"Wednesday 2",
-      sliderIcon:"https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQYOeCCpkwPAFykI7lEUIouxmiXsvxOnDs_bjQGo2Whf9FrwPXpQ6VmVKlnmMbxHBfqja2iOaEOayofhH0erJrzKxVkRz5-yQZDVFcRWnALggiACpb-9VbXOi6r6bFDT2EIPaW59Vh6GKpjsGRuvP-aASPhs.jpg?r=af7", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://lh6.googleusercontent.com/proxy/qXI6vibRqi0HKywUtJg-KTxFHe_ecDkcXiLtf3oKU7FNko0Tx1lzo41kAjOoWS34GDo1Nuf10uPylwIKLUTpGcmQgWRXvi2aId8GgD63",
     video:["https://vk.com/video_ext.php?oid=-230696351&id=456239033&hd=2","https://vk.com/video_ext.php?oid=-231301225&id=456239149&hd=2"],
     type:"series",
