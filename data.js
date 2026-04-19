@@ -182,7 +182,7 @@ const moviesData=[
    { title:"Yengilmas / Invinsible",
       sliderIcon:"https://miro.medium.com/1*TQusJA0dGM2IA7H_VrqOsw.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/M/MV5BZGM5MmM2ZDAtMzBjNS00NjMxLWE4ZTMtNzFjMWMxYzU2ZThjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    video:["https://videos.pornobande.com/mp4/9145/9145_720p.m3u8","premium","https://www.eporner.com/embed/kce9s14T6cg/"],
+    video:["premium"],
     type:"anime",
     genre:"Triller • Jangari • Fantastika",
     desc:"17 yoshli Mark Greyson er yuzidagi eng kuchli superqahramonning o'g'lidir va tez orada uning o'zi ham super kuchlarga ega bo'lishi va ularni boshqarishni o'rganishi kerak.",
