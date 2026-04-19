@@ -8,7 +8,6 @@ const moviesContainer = document.getElementById("movies");
 const seriesContainer = document.getElementById("series");
 const genresContainer = document.getElementById("genres");
 const premieresInner = document.getElementById("premieres-inner");
-const shortsContainer = document.getElementById("shorts");
 const searchBtn = document.getElementById("searchBtn");
 
 // ==================== SAFE ====================
@@ -86,25 +85,6 @@ if(safe(genresContainer)){
   });
 }
 
-// ==================== SHORTS ====================
-function renderShorts(){
-  if(!safe(shortsContainer)) return;
-
-  shortsContainer.innerHTML="";
-
-  shortsData.forEach((item, idx)=>{
-    const div=document.createElement("div");
-    div.className="short";
-
-    div.innerHTML=`<img src="${item.src}">`;
-
-    div.onclick=()=>window.location.href=`short.html?id=${idx}`;
-
-    shortsContainer.appendChild(div);
-  });
-}
-renderShorts();
-
 // ==================== SEARCH ====================
 if(safe(searchBtn)){
   searchBtn.onclick=()=>window.location.href="search.html";
@@ -128,7 +108,6 @@ function updateSlider(){
   premieresInner.style.transform = `translateX(-${premiereIndex * cardWidth}px)`;
 }
 
-// ▶️ NEXT
 function nextSlide(){
   if(!safe(premieresInner)) return;
 
@@ -141,7 +120,6 @@ function nextSlide(){
   updateSlider();
 }
 
-// ◀️ PREV
 function prevSlide(){
   if(!safe(premieresInner)) return;
 
@@ -154,10 +132,8 @@ function prevSlide(){
   updateSlider();
 }
 
-// AUTO SLIDE
 let sliderInterval = setInterval(nextSlide, 5000);
 
-// RESET TIMER
 function resetSlider(){
   clearInterval(sliderInterval);
   sliderInterval = setInterval(nextSlide, 5000);
@@ -176,12 +152,12 @@ if(safe(premieresInner)){
     const diff = startX - endX;
 
     if(diff > 50){
-      nextSlide(); // 👉 chapga surish
+      nextSlide();
       resetSlider();
     }
 
     if(diff < -50){
-      prevSlide(); // 👉 o‘ngga surish
+      prevSlide();
       resetSlider();
     }
   });
