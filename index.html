@@ -10,11 +10,21 @@
   <meta name="keywords" content="MonarxTv, online kino, bepul kino, premyera, seriallar">
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://kholkuziev.github.io/RTV/">
-  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp.png">
+  <link rel="canonical" href="https://monarxtv.github.io/1/">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- ICON -->
+  <link rel="icon" type="image/png" href="/1/icon-512.png">
+
+  <!-- PWA MANIFEST -->
+  <link rel="manifest" href="/1/manifest.json">
+  <meta name="theme-color" content="#020617">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/1/style.css">
+
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -22,58 +32,69 @@
 <div id="home">
 
 <header>
-<a href="https://t.me/Monarxtv" class="premium-btn xbet-btn" target="_blank">
-<span>Telegram</span>
-<i class="fas fa-download"></i>
-</a>
+  <a href="https://t.me/Monarxtv" class="premium-btn xbet-btn" target="_blank">
+    <span>Telegram</span>
+    <i class="fas fa-paper-plane"></i>
+  </a>
 
-<div class="logo-container">
-<div class="logo">
-<i class="fas fa-crown crown-icon"></i> MonarxTv
-</div>
-</div>
+  <div class="logo-container">
+    <div class="logo">
+      <i class="fas fa-crown crown-icon"></i> MonarxTv
+    </div>
+  </div>
 
-<span id="searchBtn"><i class="fas fa-search"></i></span>
+  <span id="searchBtn"><i class="fas fa-search"></i></span>
 </header>
 
-<!-- ✅ GENRES tepaga chiqdi -->
+<!-- GENRES -->
 <div class="row genre" id="genres"></div>
 
-<!-- ✅ PREMIERES -->
+<!-- PREMIERES -->
 <div class="row">
-<h3>Premyeralar</h3>
-<div class="cards" id="premieres">
-<div class="cards-inner" id="premieres-inner"></div>
-</div>
+  <h3>Premyeralar</h3>
+  <div class="cards" id="premieres">
+    <div class="cards-inner" id="premieres-inner"></div>
+  </div>
 </div>
 
 <!-- MOVIES -->
 <div class="row row-title">
-<h3>Kinolar</h3>
-<button id="allMoviesBtn" class="premium-btn">Barchasi</button>
+  <h3>Kinolar</h3>
+  <button id="allMoviesBtn" class="premium-btn">Barchasi</button>
 </div>
 <div class="cards" id="movies"></div>
 
 <!-- SERIES -->
 <div class="row row-title">
-<h3>Seriallar</h3>
-<button id="allSeriesBtn" class="premium-btn">Barchasi</button>
+  <h3>Seriallar</h3>
+  <button id="allSeriesBtn" class="premium-btn">Barchasi</button>
 </div>
 <div class="cards" id="series"></div>
 
 <!-- ANIME -->
 <div class="row row-title">
-<h3>Animelar</h3>
-<button id="allAnimeBtn" class="premium-btn">Barchasi</button>
+  <h3>Animelar</h3>
+  <button id="allAnimeBtn" class="premium-btn">Barchasi</button>
 </div>
 <div class="cards" id="anime"></div>
 
 </div>
 
+<!-- MOVIE PAGE -->
 <div id="movie" class="hidden"></div>
 
-<script src="data.js"></script>
-<script src="script.js"></script>
+<!-- SCRIPTS -->
+<script src="/1/data.js"></script>
+<script src="/1/script.js"></script>
+
+<!-- PWA SERVICE WORKER -->
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/1/sw.js")
+  .then(() => console.log("Service Worker ishladi"))
+  .catch(err => console.log("SW error:", err));
+}
+</script>
 
 </body>
 </html>
