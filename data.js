@@ -3,7 +3,7 @@ const moviesData=[
       { title:"Yigitlar 5 fasl o'zbek tilida / The boys 5",
       sliderIcon:"https://s0.rbk.ru/v6_top_pics/media/img/8/52/347748818551528.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/M/MV5BZjU4OWNiYzQtMzc1NS00NjZlLTgyYTctZWY4ZmEzMTkxYjA4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239102&hd=2",
+    video:["https://vkvideo.ru/video_ext.php?oid=-230696351&id=456239102&hd=2",
 "premium" ],
     type:"series",
     genre:"Qo‘rqinchli • Triller • Fantastika",
