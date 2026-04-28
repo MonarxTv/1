@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kino</title>
 
+<link rel="stylesheet" href="2style.css">
+
 <style>
 /* ================= GLOBAL ================= */
 *{
@@ -17,6 +19,7 @@
 :root{
   --gold:#FFD700;
   --bg:#000;
+  --card:#0f0f0f;
 }
 
 body{
@@ -53,7 +56,8 @@ body{
   background:#000;
   border-radius:16px;
   overflow:hidden;
-  box-shadow:0 0 25px rgba(255,215,0,0.15);
+  position:relative;
+  box-shadow:0 0 30px rgba(255,215,0,0.15);
 }
 
 #playerContainer iframe,
@@ -73,6 +77,12 @@ body{
   text-decoration:none;
   font-weight:700;
   margin:15px 0;
+  transition:.3s;
+}
+
+#downloadBtn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(255,215,0,0.5);
 }
 
 /* ================= EPISODES GRID ================= */
@@ -127,6 +137,7 @@ body{
 .actor-item{
   text-align:center;
   min-width:80px;
+  cursor:pointer;
 }
 
 .actor-item img{
@@ -134,6 +145,13 @@ body{
   height:80px;
   border-radius:50%;
   object-fit:cover;
+  border:2px solid transparent;
+  transition:.3s;
+}
+
+.actor-item:hover img{
+  border:2px solid var(--gold);
+  box-shadow:0 0 10px rgba(255,215,0,0.5);
 }
 
 /* ================= IMAGES ================= */
@@ -149,6 +167,33 @@ body{
   object-fit:cover;
   border-radius:14px;
   cursor:pointer;
+  transition:.3s;
+}
+
+.images img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px rgba(255,215,0,0.3);
+}
+
+/* ================= PREMIUM BOX ================= */
+#premiumBox{
+  display:none;
+  background:#111;
+  border:1px solid var(--gold);
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+}
+
+#premiumBox a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:var(--gold);
+  color:#000;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
 }
 
 /* ================= MODAL ================= */
@@ -164,8 +209,8 @@ body{
 #imageModal img{
   max-width:90%;
   max-height:90%;
+  border-radius:12px;
 }
-
 /* ================= MOBILE ================= */
 @media (max-width:768px){
   #episodes{
@@ -189,12 +234,14 @@ body{
 <div class="container">
 
 <div id="playerContainer"></div>
-
 <a id="downloadBtn" href="#" download>
-⬇ Yuklab olish
+  ⬇ Yuklab olish
 </a>
-
-<div id="premiumBox" style="display:none"></div>
+<div id="premiumBox">
+  <h3>Telegram kontent</h3>
+  <p>Bu film mualliflik huquqi sabab telegramga ko'chirildi</p>
+  <a href="https://t.me/c/3774058383/36" target="_blank">Telegram da ko'rish</a>
+</div>
 
 <div id="episodes"></div>
 
@@ -212,108 +259,180 @@ body{
 <script src="data.js"></script>
 
 <script>
+const TMDB_API_KEY="c86f82502e750953b61a3fc9895c95a2";
+
 const params=new URLSearchParams(window.location.search);
 const id=params.get("id");
 const movie=moviesData[id];
 
-const player=document.getElementById("playerContainer");
-const download=document.getElementById("downloadBtn");
-const episodes=document.getElementById("episodes");
+const playerContainer=document.getElementById("playerContainer");
+const downloadBtn = document.getElementById("downloadBtn");
+const episodesDiv=document.getElementById("episodes");
+const title=document.getElementById("movieTitle");
 const genre=document.getElementById("genre");
 const desc=document.getElementById("desc");
-const actors=document.getElementById("actors");
-const images=document.getElementById("images");
+const actorsDiv=document.getElementById("actors");
+const imagesDiv=document.getElementById("images");
+const premiumBox=document.getElementById("premiumBox");
 
 /* VIDEO */
 function loadVideo(url){
-  player.innerHTML="";
+  playerContainer.innerHTML="";
 
-  if(url.endsWith(".mp4")){
-    download.style.display="block";
-    download.href=url;
-
-    const video=document.createElement("video");
-    video.src=url;
-    video.controls=true;
-
-    player.appendChild(video);
-  }else{
-    download.style.display="none";
-
-    const iframe=document.createElement("iframe");
-    iframe.src=url;
-    iframe.allow="autoplay; fullscreen";
-
-    player.appendChild(iframe);
-  }
-}
-
-/* EPISODES */
-function renderEpisodes(){
-  if(!movie.video || movie.video.length<=1){
-    episodes.style.display="none";
+  // PREMIUM
+  if(url==="premium"){
+    premiumBox.style.display="block";
+    downloadBtn.style.display="none";
     return;
   }
 
+  premiumBox.style.display="none";
+
+  // 🎬 MP4 bo‘lsa
+  if(url.endsWith(".mp4")){
+    downloadBtn.style.display="block";
+    downloadBtn.href=url;
+    downloadBtn.textContent="⬇ Yuklab olish";
+    downloadBtn.removeAttribute("target");
+
+    const video = document.createElement("video");
+    video.src = url;
+    video.controls = true;
+    video.autoplay = false; // ⬅ autoplay o'chirildi
+    video.style.width = "100%";
+    video.style.height = "100%";
+
+    playerContainer.appendChild(video);
+  }
+
+  // 🚫 YouTube yoki VK bo‘lsa — tugma YO‘Q
+  else if(
+    url.includes("youtube.com") ||
+    url.includes("youtu.be") ||
+    url.includes("vk.com")
+  ){
+    downloadBtn.style.display="none";
+
+    const iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.allow = "autoplay; fullscreen";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    playerContainer.appendChild(iframe);
+  }
+
+  // 🔁 boshqa iframe bo‘lsa
+  else{
+    downloadBtn.style.display="none";
+
+    const iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.allow = "autoplay; fullscreen";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    playerContainer.appendChild(iframe);
+  }
+}
+/* EPISODES (faqat serial) */
+function renderEpisodes(){
+  episodesDiv.innerHTML="";
+
+  if(!movie.video || movie.video.length<=1){
+    episodesDiv.style.display="none";
+    return;
+  }
+
+  episodesDiv.style.display="grid";
+
   movie.video.forEach((v,i)=>{
     const btn=document.createElement("button");
-    btn.textContent=(i+1)+"-qism";
+    btn.textContent=`${i+1}-qism`;
 
     if(i===0) btn.classList.add("active");
 
     btn.onclick=()=>{
       document.querySelectorAll("#episodes button")
-      .forEach(b=>b.classList.remove("active"));
+        .forEach(b=>b.classList.remove("active"));
 
       btn.classList.add("active");
       loadVideo(v);
     };
 
-    episodes.appendChild(btn);
+    episodesDiv.appendChild(btn);
   });
 }
 
 /* ACTORS */
-function renderActors(){
-  movie.actors.forEach(a=>{
-    actors.innerHTML+=`
-      <div class="actor-item">
-        <img src="${a.img}">
-        <div>${a.name}</div>
-      </div>
+async function renderActors(){
+  actorsDiv.innerHTML="";
+
+  for(const a of movie.actors){
+    let name=a.name||"";
+    let img=a.img||"";
+
+    if(a.tmdbId){
+      try{
+        const res=await fetch(`https://api.themoviedb.org/3/person/${a.tmdbId}?api_key=${TMDB_API_KEY}`);
+        const data=await res.json();
+        name=data.name;
+        img=data.profile_path
+          ? "https://image.tmdb.org/t/p/w185"+data.profile_path
+          : img;
+      }catch(e){}
+    }
+
+    const div=document.createElement("div");
+    div.className="actor-item";
+
+    div.innerHTML=`
+      <img src="${img}">
+      <div>${name}</div>
     `;
-  });
+
+    if(a.tmdbId){
+      div.onclick=()=>{
+        window.location.href=`actor.html?id=${a.tmdbId}`;
+      };
+    }
+
+    actorsDiv.appendChild(div);
+  }
 }
 
 /* IMAGES */
 function renderImages(){
+  imagesDiv.innerHTML="";
+
   movie.images.forEach(img=>{
     const i=document.createElement("img");
     i.src=img;
 
     i.onclick=()=>{
       modalImg.src=img;
-      modal.style.display="flex";
+      imageModal.style.display="flex";
     };
 
-    images.appendChild(i);
+    imagesDiv.appendChild(i);
   });
 }
 
 /* MODAL */
-const modal=document.createElement("div");
-modal.id="imageModal";
-modal.innerHTML=`<img id="modalImg">`;
-document.body.appendChild(modal);
+const imageModal=document.createElement("div");
+imageModal.id="imageModal";
+imageModal.innerHTML=`<img id="modalImg">`;
+document.body.appendChild(imageModal);
 
 const modalImg=document.getElementById("modalImg");
 
-modal.onclick=()=>modal.style.display="none";
+imageModal.onclick=()=>{
+  imageModal.style.display="none";
+};
 
 /* INIT */
 function init(){
   if(!movie) return;
 
+  title.textContent=movie.title;
   genre.textContent=movie.genre;
   desc.textContent=movie.desc;
 
