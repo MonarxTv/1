@@ -2,10 +2,10 @@
 const moviesData=[
       { title:"Yigitlar 5 fasl o'zbek tilida / The boys 5",
       sliderIcon:"https://s0.rbk.ru/v6_top_pics/media/img/8/52/347748818551528.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-       rating:"9.1",
     image:"https://m.media-amazon.com/images/M/MV5BZjU4OWNiYzQtMzc1NS00NjZlLTgyYTctZWY4ZmEzMTkxYjA4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     video:["premium","premium","premium","premium" ],
     type:"series",
+      rating:"9.1",
     genre:"Qo‘rqinchli • Triller • Fantastika",
     desc:"ning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
      actors: [ {tmdbId:1372}, {tmdbId:1030513}, {tmdbId:60373}, {tmdbId:990393}, {tmdbId:198847}, {tmdbId:1461608}, {tmdbId:10964}, {tmdbId:1550587}, {tmdbId:60899}, {tmdbId:115146}, {tmdbId:49624}, {tmdbId:1157294}, {tmdbId:229422}, {tmdbId:1443420}, {tmdbId:1696015}, {tmdbId:4808}, {tmdbId:47296}, {tmdbId:3084833}, {tmdbId:1181426}, {tmdbId:11108} ],
