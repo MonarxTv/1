@@ -21,9 +21,33 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- INSTALL BUTTON STYLE (agar CSSga qo‘shmasang ham ishlaydi) -->
+  <style>
+    .install-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 99999;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .install-btn.hidden { display: none; }
+  </style>
 </head>
 
 <body>
+
+<!-- INSTALL BUTTON -->
+<button id="installBtn" class="install-btn hidden">
+  📲 Ilovani o‘rnatish
+</button>
 
 <div id="home">
 
@@ -90,6 +114,33 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("PWA active"))
     .catch(err => console.log("SW error:", err));
 }
+</script>
+
+<!-- INSTALL LOGIC -->
+<script>
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.classList.remove("hidden");
+});
+
+installBtn.addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt();
+
+  const choice = await deferredPrompt.userChoice;
+
+  if (choice.outcome === "accepted") {
+    console.log("Installed");
+  }
+
+  deferredPrompt = null;
+  installBtn.classList.add("hidden");
+});
 </script>
 
 </body>
