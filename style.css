@@ -435,24 +435,59 @@ header {
 }
 .install-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #2563eb;
-  color: white;
+  bottom: 22px;
+  right: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+
   border: none;
-  padding: 12px 16px;
-  border-radius: 12px;
-  font-size: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
   cursor: pointer;
   z-index: 99999;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: 0.2s;
+
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+
+  transition: all 0.25s ease;
 }
 
+/* icon uchun (agar emoji yoki i ishlatsang) */
+.install-btn i {
+  font-size: 18px;
+}
+
+/* hover effekt */
 .install-btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.6);
 }
 
+/* click effekti */
+.install-btn:active {
+  transform: scale(0.97);
+}
+
+/* hidden */
 .install-btn.hidden {
   display: none;
+}
+
+/* mobil uchun yanada chiroyli */
+@media (max-width: 600px) {
+  .install-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
 }
