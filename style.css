@@ -76,10 +76,11 @@ header {
 }
 
 /* ================= CARDS GRID ================= */
+/* Grid layout kartalar */
 .cards { 
   display: grid; 
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  grid-template-columns: repeat(3, 1fr); /* 3 ustunli grid */
+  gap: 5px; /* Bo'shliq */
 }
 
 /* CARD */
@@ -95,7 +96,7 @@ header {
   transform: translateY(-6px) scale(1.03);
 }
 
-/* IMAGE */
+/* IMAGE (IMPORTANT FIX) */
 .card img {
   width: 100%;
   height: 200px;
@@ -111,44 +112,48 @@ header {
 }
 
 /* ================= PREMIERE SLIDER ================= */
+/* Slayder container */
 #premieres { 
-  padding: 0px 0;
-  overflow: hidden;
-  position: relative;
+  padding: 0px 0; /* Yuqoridan va pastdan bo'shliq */
+  overflow: hidden; /* Slayder tashqariga chiqmasin */
+  position: relative; /* Slayder tugmalari uchun parent */
 }
 
+/* Slayder ichidagi kartalar qatori */
 #premieres-inner { 
-  display: flex;
-  gap: 12px;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-  pointer-events: none;
+  display: flex; /* Flex layout */
+  gap: 12px; /* Kartalar orasidagi bo'shliq */
+  transition: transform 0.5s ease-in-out; /* Slayder animatsiyasi */
+  will-change: transform; /* Browser optimizatsiyasi */
+  pointer-events: none; /* Defaultda hover ishlamaydi */
 }
 
+/* Har bir kartaning stili */
 #premieres-inner .card { 
   width: 370px; 
-  height: 200px;
-  flex-shrink: 0;
-  border-radius: 0px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  transform-origin: center center;
-  pointer-events: auto;
+  height: 200px; /* Kartaning o'lchami */
+  flex-shrink: 0; /* Qisqarmaydi */
+  border-radius: 0px; /* Dumaloq burchak */
+  overflow: hidden; /* Tasvir tashqariga chiqmasin */
+  cursor: pointer; /* Hoverda qo'l */
+  transition: transform 0.35s ease, box-shadow 0.35s ease; /* Hover animatsiyasi */
+  transform-origin: center center; /* Transform markazi */
+  pointer-events: auto; /* Hover ishlaydi */
 }
 
+/* Kartadagi rasm */
 #premieres-inner .card img { 
   width: 100%; 
   height: 100%; 
-  object-fit: cover;
+  object-fit: cover; /* Tasvir to'liq joylashadi */
 }
 
+/* Hover effekti kartada */
 #premieres-inner .card:hover { 
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  z-index: 2;
+  transform: scale(1.05); /* Kattalashadi */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* Soyalar */
+  z-index: 2; /* Boshqa elementlarning ustida */
 }
-
 /* ================= GENRES ================= */
 .genre {
   display: flex;
@@ -174,6 +179,7 @@ header {
 }
 
 /* ================= SHORTS ================= */
+/* ================= SHORTS (UPGRADE) ================= */
 .scroll {
   display: flex;
   gap: 14px;
@@ -255,11 +261,9 @@ header {
 .short:hover::after {
   opacity: 1;
 }
-
-/* PREMIERE TEXT OVERLAY */
 #premieres-inner .card {
-  position: relative;
-  height: 200px;
+  position: relative; /* matn va rasm uchun parent */
+  height: 200px;      /* kartaning balandligi */
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -269,23 +273,144 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
+  position: absolute;  /* rasm fon bo‘lsin */
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 0;          
   border-radius: 12px;
 }
 
+/* Matn rasmning pastki qismida chiqadi */
 #premieres-inner .card div { 
-  position: absolute;
-  bottom: 0;
+  position: absolute;  /* rasm ustida absolute */
+  bottom: 0;           /* pastki qismida turadi */
   left: 0;
-  width: 100%;
-  padding: 10px;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  z-index: 1;
-  text-align: center;
+  width: 100%;         /* rasm eni bilan bir xil */
+  padding: 10px;       /* matn atrofida bo‘shliq */
+  background: rgba(0,0,0,0.5); /* matn o‘qilishi uchun yarim shaffof fon */
+  color: #fff;         
+  z-index: 1;         
+  text-align: center;  /* markazlashtirilgan matn */
   font-weight: bold;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 12px 12px; /* pastki burchaklar yumaloq */
+}
+.hero-slider{
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 15px 0;
+}
+
+.hero-track{
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.hero-slide{
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.hero-title{
+  position:absolute;
+  bottom:30px;
+  left:20px;
+  font-size:22px;
+  font-weight:bold;
+  z-index:2;
+}
+
+.hero-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  border:none;
+  color:white;
+  font-size:25px;
+  padding:10px;
+  cursor:pointer;
+  z-index:3;
+}
+
+.hero-btn.prev{ left:10px; }
+.hero-btn.next{ right:10px; }
+
+.dots{
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  z-index:3;
+}
+
+.dots span{
+  width:8px;
+  height:8px;
+  background:#888;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.dots span.active{
+  background:white;
+}
+
+@media(max-width:768px){
+  .hero-slider{ height:260px; }
+  .hero-title{ font-size:16px; }
+}
+.card-img{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.card-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ⭐ RATING chap yuqori burchak */
+.rating-badge{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.7);
+  color: gold;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* title pastda alohida */
+.card-title{
+  padding: 8px;
+  font-size: 13px;
+  text-align: center;
 }
