@@ -414,3 +414,22 @@ header {
   font-size: 13px;
   text-align: center;
 }
+#splash {
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+#splash img {
+  width: 130px;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
