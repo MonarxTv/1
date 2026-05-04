@@ -152,6 +152,11 @@ renderCards(moviesData.filter(m=>m.type==="movie"), moviesContainer);
 renderCards(moviesData.filter(m=>m.type==="series"), seriesContainer);
 renderCards(moviesData.filter(m=>m.type==="anime"), animeContainer);
 
+// ==================== BARCHASI ====================
+document.getElementById("allMoviesBtn")?.addEventListener("click", ()=>openFullPage("movie"));
+document.getElementById("allSeriesBtn")?.addEventListener("click", ()=>openFullPage("series"));
+document.getElementById("allAnimeBtn")?.addEventListener("click", ()=>openFullPage("anime"));
+
 // ==================== GENRES ====================
 if(genresContainer){
   genresData.forEach(g=>{
