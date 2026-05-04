@@ -1,5 +1,19 @@
 
 const moviesData=[
+          {title:"Amerikalik Qasoskor",
+  image:"https://media.themoviedb.org/t/p/w600_and_h900_face/w6vjeHx3UEaBXIyc8VFqyZYKznD.jpg",
+    video:["https://fayllar1.ru/11/Amerika%20josusi%20(Yonlanma%20zobit)%20720p%20O'zbek%20tilida%20(asilmedia.net).mp4"],
+    rating:"6.2",
+    type:"movie",
+    genre:"Jangari • Kriminal",
+    desc:"Amerikalik josus.",
+  actors: [ {tmdbId:527393}, {tmdbId:2232}, {tmdbId:60900}, {tmdbId:1797771}, {tmdbId:5411}, {tmdbId:78110} ],
+    images:[
+      "https://www.pluggedin.com/wp-content/uploads/2019/12/American_Assassin__Large.jpg.jpeg", 
+      "https://images.maketheswitch.com.au/fit-in/1001x99999/filters:format(webp)/toppic/americanassassin.jpg", 
+       "https://image.pmgstatic.com/cache/resized/w663/files/images/film/video/preview/161/682/161682788_293689.jpg",
+      "https://www.hollywoodreporter.com/wp-content/uploads/2017/09/american_assassin_still_4.jpg?w=1296&h=730&crop=1"]
+}, 
       { title:"Yigitlar 5 fasl o'zbek tilida / The boys 5",
       sliderIcon:"https://s0.rbk.ru/v6_top_pics/media/img/8/52/347748818551528.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/M/MV5BZjU4OWNiYzQtMzc1NS00NjZlLTgyYTctZWY4ZmEzMTkxYjA4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
