@@ -35,7 +35,7 @@ const moviesData=[
 
     "https://images.squarespace-cdn.com/content/v1/57825361440243db4a4b7830/1471887766947-WWUN9E6XQH0JQ2P8RME8/Machete+Kills.jpg"
   ]
-}
+},
 
           {title:"Amerikalik Qasoskor",
   image:"https://media.themoviedb.org/t/p/w600_and_h900_face/w6vjeHx3UEaBXIyc8VFqyZYKznD.jpg",
