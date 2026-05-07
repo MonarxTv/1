@@ -27,13 +27,13 @@ actors: [
 ],
 
   images:[
-    "https://www.moviestillsdb.com/movies/machete-i985694/nqrMKt",
+    "https://m.media-amazon.com/images/M/MV5BMTU0OTY2MDAyN15BMl5BanBnXkFtZTcwMDIzNDQ4OQ@@._V1_.jpg",
 
-    "https://www.filmstarts.de/kritiken/196177/bilder/?cmediafile=21044290",
+    "https://nypost.com/wp-content/uploads/sites/2/2013/10/machetekills.jpg?quality=75&strip=all&w=1200",
 
-    "http://www.kinokadr.ru/films/m/machetekills/",
+    "https://www.moviescramble.co.uk/wp-content/uploads/2013/05/machete-kills-featured.jpeg",
 
-    "https://m.media-amazon.com/images/M/MV5BNDk5MGE1MzYtMGYxNi00YTM2LWEwZjktMmQwYWQ0YzVkN2Y5XkEyXkFqcGdeQXVyNzU1NzE3NTg@._V1_QL75_UX500_CR0,47,500,281_.jpg"
+    "https://m.media-amazon.com/images/M/MV5BNTEwNjYxNzMxMV5BMl5BanBnXkFtZTgwNjYxMjUzMDE@._V1_.jpg"
   ]
 },
 
