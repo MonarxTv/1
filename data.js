@@ -1,5 +1,42 @@
 
 const moviesData=[
+{
+  title:"Machete Killer",
+  
+  image:"https://m.media-amazon.com/images/M/MV5BMjA5OTgyMTQ5NF5BMl5BanBnXkFtZTcwODQ1NDE0OQ@@._V1_.jpg",
+
+  video:[
+    "https://fayllar1.ru/30/kinolar/Machete%202013%20480p%20O'zbek%20tilida%20(asilmedia.net).mp4"
+  ],
+
+  rating:"5.6",
+  
+  type:"movie",
+  
+  genre:"Jangari • Kriminal",
+  
+  desc:"Machete xavfli jinoyatchilar va terrorchilarga qarshi kurash olib boradi.",
+
+  actors:[
+    {tmdbId:11160},
+    {tmdbId:2231},
+    {tmdbId:287},
+    {tmdbId:11701},
+    {tmdbId:192},
+    {tmdbId:500}
+  ],
+
+  images:[
+    "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/05/Machete-Kills.jpg",
+
+    "https://www.slashfilm.com/img/gallery/machete-kills-review/l-intro-1686948478.jpg",
+
+    "https://m.media-amazon.com/images/M/MV5BMTQ2ODQ2ODQ4MV5BMl5BanBnXkFtZTcwNzM1NDE0OQ@@._V1_.jpg",
+
+    "https://images.squarespace-cdn.com/content/v1/57825361440243db4a4b7830/1471887766947-WWUN9E6XQH0JQ2P8RME8/Machete+Kills.jpg"
+  ]
+}
+
           {title:"Amerikalik Qasoskor",
   image:"https://media.themoviedb.org/t/p/w600_and_h900_face/w6vjeHx3UEaBXIyc8VFqyZYKznD.jpg",
     video:["https://fayllar1.ru/11/Amerika%20josusi%20(Yonlanma%20zobit)%20720p%20O'zbek%20tilida%20(asilmedia.net).mp4"],
