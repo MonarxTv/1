@@ -54,7 +54,7 @@ actors: [
       { title:"Yigitlar 5 fasl o'zbek tilida / The boys 5",
       sliderIcon:"https://s0.rbk.ru/v6_top_pics/media/img/8/52/347748818551528.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/M/MV5BZjU4OWNiYzQtMzc1NS00NjZlLTgyYTctZWY4ZmEzMTkxYjA4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    video:["premium","premium","premium","premium" ],
+    video:["premium","premium","premium","https://uzmovi.net/tarjima-kinolarri/8645-yigitlar-5-mavsum-5-fasl-barcha-qismlari-uzbek-ozbek-tilida-premyera/episode/33708/1.html" ],
     type:"series",
       rating:"9.1",
     genre:"Qo‘rqinchli • Triller • Fantastika",
