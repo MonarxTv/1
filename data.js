@@ -17,14 +17,14 @@ const moviesData=[
   
   desc:"Machete xavfli jinoyatchilar va terrorchilarga qarshi kurash olib boradi.",
 
-  actors:[
-    {tmdbId:11160},
-    {tmdbId:2231},
-    {tmdbId:287},
-    {tmdbId:11701},
-    {tmdbId:192},
-    {tmdbId:500}
-  ],
+actors: [
+  { tmdbId: 11160 },
+  { tmdbId: 2461 },
+  { tmdbId: 76961 },
+  { tmdbId: 55085 },
+  { tmdbId: 17647 },
+  { tmdbId: 63522 }
+],
 
   images:[
     "https://www.moviestillsdb.com/movies/machete-i985694/nqrMKt",
