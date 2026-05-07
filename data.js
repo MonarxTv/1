@@ -27,13 +27,13 @@ const moviesData=[
   ],
 
   images:[
-    "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/05/Machete-Kills.jpg",
+    "https://www.moviestillsdb.com/movies/machete-i985694/nqrMKt",
 
-    "https://www.slashfilm.com/img/gallery/machete-kills-review/l-intro-1686948478.jpg",
+    "https://www.filmstarts.de/kritiken/196177/bilder/?cmediafile=21044290",
 
-    "https://m.media-amazon.com/images/M/MV5BMTQ2ODQ2ODQ4MV5BMl5BanBnXkFtZTcwNzM1NDE0OQ@@._V1_.jpg",
+    "http://www.kinokadr.ru/films/m/machetekills/",
 
-    "https://images.squarespace-cdn.com/content/v1/57825361440243db4a4b7830/1471887766947-WWUN9E6XQH0JQ2P8RME8/Machete+Kills.jpg"
+    "https://www.hollywoodreporter.com/movies/movie-reviews/machete-kills-film-review-644016/"
   ]
 },
 
