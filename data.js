@@ -1,7 +1,7 @@
 
 const moviesData=[
 {
-  title:"Machete Killer",
+  title:"Machete 2",
   
   image:"https://www.imdb.com/title/tt2002718/",
 
