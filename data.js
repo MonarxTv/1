@@ -3,7 +3,7 @@ const moviesData=[
 {
   title:"Machete Killer",
   
-  image:"https://m.media-amazon.com/images/M/MV5BMjA5OTgyMTQ5NF5BMl5BanBnXkFtZTcwODQ1NDE0OQ@@._V1_.jpg",
+  image:"https://www.imdb.com/title/tt2002718/",
 
   video:[
     "https://fayllar1.ru/30/kinolar/Machete%202013%20480p%20O'zbek%20tilida%20(asilmedia.net).mp4"
