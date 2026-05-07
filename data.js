@@ -3,7 +3,7 @@ const moviesData=[
 {
   title:"Machete 2",
   
-  image:"https://www.imdb.com/title/tt2002718/",
+  image:"https://https://www.imdb.com/title/tt2002718/",
 
   video:[
     "https://fayllar1.ru/30/kinolar/Machete%202013%20480p%20O'zbek%20tilida%20(asilmedia.net).mp4"
