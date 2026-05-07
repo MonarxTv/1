@@ -33,7 +33,7 @@ actors: [
 
     "http://www.kinokadr.ru/films/m/machetekills/",
 
-    "https://www.hollywoodreporter.com/movies/movie-reviews/machete-kills-film-review-644016/"
+    "https://m.media-amazon.com/images/M/MV5BNDk5MGE1MzYtMGYxNi00YTM2LWEwZjktMmQwYWQ0YzVkN2Y5XkEyXkFqcGdeQXVyNzU1NzE3NTg@._V1_QL75_UX500_CR0,47,500,281_.jpg"
   ]
 },
 
